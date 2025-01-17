@@ -4,4 +4,5 @@
 ---
 1일 1잔디 심기
 
-2025.01.16 - git
+2025.01.16. - git, git branch
+2025.01.17. - git reset, git revert
