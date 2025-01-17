@@ -16,6 +16,6 @@
             - 삭제 된 commit의 기록을 working directory에 남김 (기본 옵션)
         - **--hard**
             - 삭제 된 commit의 기록을 모두 삭제, 남기지 않음
-            ![alt text](img/resetoption.png)
+            ![alt text](../img/resetoption.png)
 
     
