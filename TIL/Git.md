@@ -32,7 +32,11 @@
 
 - git config --global --list : global 설정 된 config 리스트 확인
 
-- git config --unset --global “해제할 것것” : global 설정 된 config 해제
+- git config --unset --global “해제할 것” : global 설정 된 config 해제
+
+- git rm --cached : Stagin Area에서 Working Directory 로 되돌리기 (git 저장소에 commit이 없는 경우 )
+
+- git restore --staged :tagin Area에서 Working Directory 로 되돌리기 (git 저장소에 commit이 존재하는 경우)
 
 # Gitignore
 - Git 에서 특정 파일이나 디렉토리를 추적하지 않도록 설정하는데 사용되는 텍스트 파일 (프로젝트에 따라 공유하지 않아야 하는 것들도 존재하기 때문에 활용)
