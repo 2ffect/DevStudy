@@ -14,7 +14,7 @@
 
 - git status : 현재 로컬 저장소의 파일 상태 확인
 
-- gif config --global alias.st 'status' : git status 명령어를 git st로 간단하게 설정가능
+- git config --global alias.st 'status' : git status 명령어를 git st로 간단하게 설정가능
 
 - git remote add origin **remote_repo_url**  : 로컬 저장소에 원격 저장소 추가 ( 볼드체에 레퍼지토리 url 을 입력 )
 
