@@ -7,3 +7,5 @@
 2025.01.16. - git, git branch
 
 2025.01.17. - git reset, git revert
+
+2025.01.18. - feat algorithm
