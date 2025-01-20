@@ -9,3 +9,5 @@
 2025.01.17. - git reset, git revert
 
 2025.01.18. - feat algorithm
+
+2025.01.20. - feat python
