@@ -117,7 +117,7 @@ variable = expression
 - 값들을 구분하고 어떻게 다뤄야할지 알 수 있음
 - 타입을 명시적으로 지정해야 코드를 읽는 사람이 변수의 의도를 더 쉽게 이해할 수 있고, 잘못된 데이터 타입으로 인한 오류를 미리 예방
 
-### 1. Numeric Types
+## 1. Numeric Types
     1. int (정수 자료형)
         - 정수를 표현하는 자료형
         진수 표현
@@ -153,7 +153,7 @@ print(b) # 0.1
 print(a == b) # True
 ```
 
-### 2. Sequence Types
+## 2. Sequence Types
 - 여러 개의 값들을 **순서대로 나열**하여 저장하는 자료형
     - (str, list, tuple, range)
 
@@ -224,7 +224,7 @@ my_str = 'hello'
 my_str[1] = 'z'
 ```
 
-### List
+### List (리스트)
 - 여러 개의 값을 순서대로 저장하는 **변경 가능한** 시퀀스 자료형
 
 - 리스트 표현
@@ -265,8 +265,8 @@ my_str[1] = 'z'
     # ★★★ 위 경우는 문자열을 바꾼것이 아닌, 리스트의 요소를 변경한 것 즉,리스트의 요소가 바라보는 주소가 변경되는 것. 
     ```
 
-### tuple
-- 여러 개의 값을 순서대로 저장하는 **변경 불가능한** 시퀀스 자료형형
+### tuple (튜플)
+- 여러 개의 값을 순서대로 저장하는 **변경 불가능한** 시퀀스 자료형
 
 - 튜플 표현
     - 0개 이상의 객체를 포함하여 데이터 목록을 저장
@@ -354,3 +354,227 @@ for i in range(1, 10):
 for i in range(1, 10, 2):
     print(i)  # 1 3 5 7 9
 ```
+<br>
+
+## 3. Non-Sequence Types
+### dict (딕셔너리)
+- key - value 쌍으로 이루어진 순서와 중복이 없는 변경 가능한 자료형
+
+- 딕셔너리 표현
+    - key는 변경 불가능한 자료형만 사용 가능 (str, int, float, tuple, range ...)
+    - value는 모든 자료형 사용 가능
+    - 중괄호 ({ })로 표기
+
+- 딕셔너리 사용
+    - key를 통한 value에 접근
+    ```python
+    my_dict = {'apple': 12, 'list': [1, 2, 3]}
+    print(my_dict['apple']) # 12
+    print(my_dict['list'][1]) # 2
+    ```
+
+    - 값 추가 & 변경
+    ```python    
+    # 추가
+    my_dict['banana'] = 50
+    print(my_dict)  # {'apple': 12, 'list': [1, 2, 3], 'banana': 50}
+
+    # 변경
+    my_dict['apple'] = 100
+    print(my_dict)  # {'apple': 100, 'list': [1, 2, 3], 'banana': 50}
+    ```
+
+### set (세트 (집합 자료형))
+- 순서와 **중복이 없는** **변경 가능한** 자료형
+
+- 세트 표현
+    - 수학에서의 집합과 동일한 연산 처리 가능
+    - 중괄호 ({ })
+    - 빈 세트를 생성 시 소괄호 (( )) 사용
+    ```python
+    my_set = set()
+    ```
+- 세트의 집합 표현
+```python
+# 세트의 집합 연산
+my_set_1 = {1, 2, 3}
+my_set_2 = {3, 6, 9}
+
+# 합집합
+print(my_set_1 | my_set_2)  # {1, 2, 3, 6, 9}
+# 차집합
+print(my_set_1 - my_set_2)  # {1, 2}
+# 교집합
+print(my_set_1 & my_set_2)  # {3}
+```
+- **세트는 순서가 없기 때문에 인덱스로 접근이 불가**
+
+## 4. Other Types
+### None
+- 파이썬에서 **'값이 없음'**을 표현하는 자료형
+- None 표현
+```python
+variable = None
+print(variable) # None
+```
+
+### Boolean (불리언)
+- 참(True)과 거짓(False)을 표현하는 자료형
+- 불리언 표현
+    - 비교 / 논리 연산의 평과 결과로 사용됨
+    - 주로 조건 / 반복문과 함께 사용
+    ```python
+    bool_1 = True
+    bool_2 = False
+
+    print(bool_1) # True
+    print(bool_2) # False
+    print(3 > 1) # True
+    print('3' != 3) # True
+    ```
+
+### Collection
+- 여러 개의 항목 또는 요소를 담는 자료구조
+    - str, list, tuple, set, dict
+- 컬렉션 정리
+    ![alt text](/TIL/img/Collection.png)
+    - 시퀀스인 경우 순서 O
+    - 논시퀀스인 경우 순서 X
+    <br>
+
+<br>
+
+## 형변환 (Type Conversion)
+- 한 데이터 타입을 다른 데이터 타입으로 변환하는 과정
+    - 암시적 형변환 / 명시적 형변환
+
+### 암시적 형변환
+- 파이썬이 자동으로 수행하는 형변환
+- 암시적 형변환 예시
+    - 정수와 실수의 연산에서 정수가 실수로 변환됨
+    - Boolean 과 Numeric Type에서만 가능
+    ```python
+    print(3 + 5.0) # 8.0
+    print(True + 3) # 4
+    print(True + False) # 1
+
+    True는 1 False는 0으로 취급하기 때문
+    ```
+
+### 명시적 형변환
+- 프로그래머가 직접 지정하는 형변환
+- 암시적 형변환이 아닌 경우를 모두 포함
+- 명시적 형변환 예시
+    - str -> int : 형식에 맞는 숫자만 가능
+    ```python
+    print(int('1')) # 1
+    
+    # ValueError: invalid literal for int() with base 10: '3.5'
+    print(int('3.5'))
+    print(int(3.5)) # 3
+    print(float('3.5')) # 3.5
+    ```
+    <br>
+
+    - int -> str : 모두 가능
+    ```python
+    print(str(1) + '등') # 1등
+    ```
+
+- 컬렉션 간 형변환 정리
+![alt text](/TIL/img/TypeConversion.png)
+
+## 연산자
+### 산술 연산자
+![alt text](/TIL/img/operator1.png)
+
+### 복합 연산자
+- 연산과 할당이 함께 이루어짐
+![alt text](/TIL/img/operator2.png)
+- 왼쪽 의미에 쓰여진 것으로 먼저 연습 후 예시로 사용
+
+    - 복합 연산자 예시
+    ```python
+    # 복합 연산자
+    y = 10
+    y -= 4
+    # y = y - 4
+    print(y)  # 6
+
+    z = 7
+    z *= 2
+    print(z)  # 14
+
+    w = 15
+    w /= 4
+    print(w)  # 3.75
+
+    q = 20
+    q //= 3
+    print(q)  # 6
+    ```
+
+### 비교 연산자
+![alt text](/TIL/img/operator3.png)
+
+- **== 비교 연산자**
+    - 값(데이터)가 같은지를 비교
+    - 동등성(equality)
+    - 예를들어, 1 == True의 경우 파이썬 내부적으로 True를 1로 간주할 수 있으므로 True 결과가 나옴.
+    - 예시
+    ```python
+    print(2.0 == 2)  # True
+    print(2 != 2)  # False
+    print('HI' == 'hi')  # False
+    print(1 == True) # True
+    ```
+
+- **is 비교 연산자**
+    - 객체 자체가 같은지를 비교
+    - 식별성(identity)
+    - 두 변수가 동일한 메모리 주소(레퍼런스)를 가리키고 있을 때만 True
+    - 예시
+    ```python
+    # SyntaxWarning: "is" with a literal. Did you mean "=="?
+    print(1 is True)  # False
+    print(2 is 2.0)  # False
+    ```
+
+### 왜 is 대신 ==를 사용해야 하나?
+- 숫자나 문자열 같은 값 자체를 비교하는 상황이 더 많은데 is를 사용시 의도치 않은 결과 (False)가 나오거나 내부 구현 차이로 기대하는 결과가 달라질 수 있기 때문에 == 를 사용하는 것을 권장.
+
+### is 연산자는 언제 사용하는가? 
+1. #### None을 비교 할 때
+- 같은 주소에 있는가? 라는 질문에 답을 해야 할 때
+- 파이썬 공식 스타일 가이드에서 None을 비교할 때 == 대신 is를 사용하라고 권장
+
+2. #### 싱글턴 객체를 비교할 때
+- 프로그램 전체에서 오직 1개만 존재하도록 만들어진 특별한 객체
+- None, True, False 는 파이썬에서 딱 1개만 사용되며 미리 정해진 하나의 객체가 재사용되기 때문에 여러 곳에서 쓰더라도 같은 메모리 주소를 가리킨다.
+
+### == 와 is 정리
+- 값 비교에는 ==을 사용하고, 객체(레퍼런스) 비교에는 is를 사용하는 것이 원칙
+- is는 주로 None비교나, 싱글턴 객체에 대한 정체성 체크에 사용
+
+### 논리 연산자
+![alt text](/TIL/img/operator4.png)
+ - 비교 연산자와 함께 사용 가능
+
+
+### 단축평가
+- 논리 연산에서 두 번째 피연산자를 평가하지 않고 결과를 결정하는 동작
+- 코드 실행을 최적화하고 불필요한 연산을 피할 수 있도록 단축평가를 함
+- 단축평가 동작
+    - and
+    - or
+
+### 멤버십 연산자
+- 특정 값이 시퀀스나 다른 컬렉션에 속하는지 여부를 확인
+![alt text](/TIL/img/membership.png)
+
+### 시퀀스형 연산자
+- \+ 와 * 는 시퀀스 간 연산에서 산술 연산자일때와 다른 역할을 가짐
+![alt text](/TIL/img/sequence.png)
+
+### 연산자 우선순위 정리
+![alt text](/TIL/img/operator5.png)
