@@ -578,3 +578,4 @@ print(variable) # None
 
 ### 연산자 우선순위 정리
 ![alt text](/TIL/img/operator5.png)
+
