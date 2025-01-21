@@ -223,3 +223,134 @@ my_str = 'hello'
 # TypeError: 'str' object does not support item assignment
 my_str[1] = 'z'
 ```
+
+### List
+- 여러 개의 값을 순서대로 저장하는 **변경 가능한** 시퀀스 자료형
+
+- 리스트 표현
+    - 0개 이상의 객체를 포함하며 데이터 목록을 저장
+    - 대괄호 ([ ]) 로 표기
+    - 데이터는 어떤 자료형도 저장할 수 있음
+    ```python
+    # 리스트 표현
+    my_list_1 = []
+    my_list_2 = [1, 'a', 3, 'b', 5]
+    my_list_3 = [1, 2, 3, 'python', ['hello', 'world', '!!!']]
+    my_list = [1, 'a', 3, 'b', 5]    
+    ```
+    <br>
+- 리스트 시퀀스 특징
+    - 인덱싱 가능
+    - 슬라이싱 가능
+    - 길이측정 가능
+
+    ```python
+    # 중첩된 리스트 접근
+    my_list = [1, 2, 3, 'Python', ['hello', 'world', '!!!']]
+    print(len(my_list))  # 5
+    print(my_list[-1][-1])  # !!!
+    print(my_list[-1][-2][0])  # w
+
+    # 리스트는 가변
+    my_list = [1, 2, 3]
+    my_list[0] = 100
+
+    print(my_list) # 100, 2, 3
+
+    # ★★★
+    my_list_test = [1, 'world', 3]
+    my_list_test[1] = 100
+    print(my_list_test) # 1, 100, 3
+
+    # ★★★ 위 경우는 문자열을 바꾼것이 아닌, 리스트의 요소를 변경한 것 즉,리스트의 요소가 바라보는 주소가 변경되는 것. 
+    ```
+
+### tuple
+- 여러 개의 값을 순서대로 저장하는 **변경 불가능한** 시퀀스 자료형형
+
+- 튜플 표현
+    - 0개 이상의 객체를 포함하여 데이터 목록을 저장
+    - 소괄호 (( ))표기
+    - 데이터는 어떤 자료형도 저장할 수 있음
+    ```python
+    # 튜플 표현
+    my_tuple_1 = ()
+    my_tuple_2 = (1,)
+    # 단일 요소 튜플을 만들 때는 반드시 Trailing comma (후행 쉼표)를 사용해야 함 
+    # (1) 의 경우 int 1로 해석 됨
+
+    my_tuple_3 = (1, 'a', 3, 'b', 5)
+    ```
+
+- 튜플은 어디에 쓰일까?
+    - 튜플의 불변 특성을 사용해 **내부 동작**과 안전한 데이터 전달에 사용된다.
+    - ex) 다중 할당, 값 교환, 그룹화, 함수 다중 반환값 등
+    ![alt text](/TIL/img/tuple.png)
+
+### range
+- **연속된 정수 시퀀스를 생성**하는 **변경 불가능한** 자료형 
+
+- range 기본 구문
+    - 모든 매개변수는 **정수**만 사용 가능
+    ```python
+    range(시작 값, 끝 값, 증가 값)
+    ```
+
+- range 매개변수 별 특징
+    - range(n)
+        - 0부터 n-1 까지 1씩 증가
+    - range(n, m)
+        - n부터 m-1 까지 1씩 증가
+    - range(n, m, step)
+        - n부터 m-1 까지 step씩 증가
+
+```python
+# range
+my_range_1 = range(5)
+my_range_2 = range(1, 10)
+my_range_3 = range(5, 0, -1)
+
+print(my_range_1)  # range(0, 5)
+print(my_range_2)  # range(1, 10)
+print(my_range_3)  # range(5, 0, -1)
+
+# 리스트로 형 변환 시 데이터 확인 가능
+print(list(my_range_1))  # [0, 1, 2, 3, 4]
+print(list(my_range_2))  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(list(my_range_3))  # [5, 4, 3, 2, 1]
+```
+
+- 증가 값 규칙
+    - 기본 증가 값은 1
+    - 음수 증가 값
+        - 감소하는 수열 생성
+    - 양수 증가 값
+        - 증가하는 수열 생성
+    - 증가 값이 0이면 error
+
+    - 음수 증가 시
+        - 시작 값이 끝 값보다 커야 함
+    ```python
+    # 시작 값이 끝 값보다 큰 경우 (정상)
+    print(list(range(5, 1, -1)))  # [5, 4, 3, 2]
+    # 시작 값이 끝 값보다 작은 경우
+    print(list(range(1, 5, -1)))  # []
+    ```
+    
+    - 양수 증가 시
+        - 시작 값이 끝 값보다 작아야 함
+    ```python
+    # 시작 값이 끝 값보다 작은 경우 (정상)
+    print(list(range(1, 5)))  # [1, 2, 3, 4]
+    # 시작 값이 끝 값보다 큰 경우
+    print(list(range(5, 1)))  # []
+    ```
+
+- range는 주로 반복문과 함께 활용 됨
+```python
+for i in range(1, 10):
+    print(i)  # 1 2 3 4 5 6 7 8 9
+
+for i in range(1, 10, 2):
+    print(i)  # 1 3 5 7 9
+```
