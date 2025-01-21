@@ -11,3 +11,5 @@
 2025.01.18. - feat algorithm
 
 2025.01.20. - feat python
+
+2025.01.21. - add python_1st_week.md
