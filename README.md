@@ -12,4 +12,6 @@
 
 2025.01.20. - feat [Baekjoon](/Algorithm/Baekjoon/) , add [8958.py](/Algorithm/Baekjoon/Python/8958.py)
 
-2025.01.21. - add [Python_1st_week.md](/TIL/Python/Python_1st_week.md) , [Deepcopy](/TIL/Python/Deepcopy.md)
+2025.01.21. - add [Python_Basic_syntax.md](/TIL/Python/Python_Basic_syntax.md) , [Deepcopy](/TIL/Python/Deepcopy.md)
+
+2025.01.22. - add [Functions](/TIL/Python/Functions.md)
