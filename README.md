@@ -15,5 +15,6 @@
 2025.01.22. - add [Functions](/TIL/Python/Functions.md)
 
 2025.01.23. - add [Module](/TIL/Python/Module.md) and [Control_ Statement](/TIL/Python/Control_Statement.md)
+and [Enumerate](/TIL/Python/Enumerate.md)
 
 ---
