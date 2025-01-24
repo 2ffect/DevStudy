@@ -17,4 +17,6 @@
 2025.01.23. - add [Module](/TIL/Python/Module.md) and [Control_ Statement](/TIL/Python/Control_Statement.md)
 and [Enumerate](/TIL/Python/Enumerate.md)
 
+2025.01.24. - add [Data_Structure](/TIL/Python/Data_Structure.md)
+
 ---
