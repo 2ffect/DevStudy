@@ -19,4 +19,5 @@ and [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.01.24. - add [Data_Structure](/TIL/Python/Data_Structure.md)
 
+2025.01.25. - add [Reverse_pop(index)](/TIL/Python/Reverse_pop(index).md)
 ---
