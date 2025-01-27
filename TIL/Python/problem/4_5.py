@@ -313,16 +313,14 @@ def create_user(user_data):
     count = 0
     for users in user_data:
         is_validation(users)
-        if is_validation(users) == 'blocked': # True 이면 blocked 인 것 잘못 된 인원에 +1 하고 검사 종료
+        if is_validation(users) == 'blocked' or False: # True 이면 blocked 인 것 잘못 된 인원에 +1 하고 검사 종료
             count += 1
-            break
-
-        elif is_validation(users) == False: # False 이면 카운트 +1 
-            count += 1
-            user_list.append(users)
-
+            if is_validation(users) == 'blocked':
+                continue
+            elif is_validation(users) == False:
+                pass
         else:
-            pass
+            continue
 
     print(f'잘못된 데이터로 구성된 유저의 수는 {count} 입니다.')
     print(user_list)
@@ -354,9 +352,7 @@ def is_validation(users):
             error_data.append(key)
             result = (False, error_data)
         return result
-
-    else:
-        return True
-        
+    
+    print(error_data)
 
 print(create_user(user_data))
