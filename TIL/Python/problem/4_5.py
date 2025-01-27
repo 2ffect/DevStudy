@@ -312,13 +312,18 @@ def create_user(user_data):
     user_list = []
     count = 0
     for users in user_data:
-        is_validation(users)
-        if is_validation(users) == 'blocked' or False: # True 이면 blocked 인 것 잘못 된 인원에 +1 하고 검사 종료
+        result = is_validation(users)
+        if result == 'blocked': # True 이면 blocked 인 것 잘못 된 인원에 +1 
             count += 1
-            if is_validation(users) == 'blocked':
-                continue
-            elif is_validation(users) == False:
-                pass
+            continue
+
+        # 이때, 반환 받은 값이 False인 경우, 잘못된 데이터에는 None을 할당하여 데이터를 생성한다.
+        # 또한, 반환 받은 값이 False이거나 'blocked'인 경우를 모두 세어, '잘못된 데이터로 구성된 유저의 수는 {개수} 입니다.' 를 출력한다.
+        # 단,'blocked'가 반환된 경우, 해당 유저 정보는 user_list에 추가하지 않는다.
+        # 완성된 user_list를 출력한다.
+        elif result == False: # False 일 때도 count +1
+            count += 1
+            continue
         else:
             continue
 
@@ -343,16 +348,30 @@ def is_validation(users):
         # 어떤 데이터가 잘못 기록되었는지도 함께 반환한다. 
         # 2개 이상의 데이터가 잘못 되었다면 리스트 형태로 목록을 반환한다. 
         # 모두 정상이라면 True를 반환한다.
-        # 이때, 반환 받은 값이 False인 경우, 잘못된 데이터에는 None을 할당하여 데이터를 생성한다.
-        # 또한, 반환 받은 값이 False이거나 'blocked'인 경우를 모두 세어, '잘못된 데이터로 구성된 유저의 수는 {개수} 입니다.' 를 출력한다.
-        # 단,'blocked'가 반환된 경우, 해당 유저 정보는 user_list에 추가하지 않는다.
-        # 완성된 user_list를 출력한다.
-    elif (users['blood_group'] not in blood_types) or (users['mail'] not in '@') or (30 < len(users['name']) or 2 > len(users['name'])) or (len(users['website']) < 1):
-        for key in users:
-            error_data.append(key)
-            result = (False, error_data)
-        return result
-    
-    print(error_data)
+        
+    # 혈액형 검사
+    if users["blood_group"] not in blood_types:
+        error_data.append("blood_group")
+
+    # 이메일 검사
+    if "@" not in users["mail"]:
+        error_data.append("mail")
+
+    # 이름 검사
+    if not (2 <= len(users["name"]) <= 30):
+        error_data.append("name")
+
+    # 웹사이트 검사
+    if len(users["website"]) < 1:
+        error_data.append("website")
+
+    # 오류가 있으면 False 반환
+    if error_data is True:
+        print(error_data)
+        return False
+
+    # 모두 통과하면 True 반환
+    return True
+
 
 print(create_user(user_data))
