@@ -312,7 +312,9 @@ def create_user(user_data):
     user_list = []
     count = 0
     for users in user_data:
+        # print(users)
         result = is_validation(users)
+        print(result)
         if result == 'blocked': # True 이면 blocked 인 것 잘못 된 인원에 +1 
             count += 1
             continue
@@ -336,7 +338,7 @@ def create_user(user_data):
 
 def is_validation(users):
     error_data = []
-        # 블랙리스트에 속해 있으면 'blocked' 반환하고 종료 아니면 else 진행.
+        # 블랙리스트에 속해 있으면 'blocked' 반환 아니면 아래 순차 진행
     if users['company'] in black_list:
         return 'blocked'
         # blood_group의 값이 blood_types에 포함되어 있는가.
@@ -349,28 +351,31 @@ def is_validation(users):
         # 2개 이상의 데이터가 잘못 되었다면 리스트 형태로 목록을 반환한다. 
         # 모두 정상이라면 True를 반환한다.
         
-    # 혈액형 검사
+    # 혈액형 검사 아니면 error_data에 추가
     if users["blood_group"] not in blood_types:
         error_data.append("blood_group")
 
-    # 이메일 검사
+    # 이메일 검사 아니면 error_data에 추가
     if "@" not in users["mail"]:
         error_data.append("mail")
 
-    # 이름 검사
+    # 이름 검사 아니면 error_data에 추가
     if not (2 <= len(users["name"]) <= 30):
         error_data.append("name")
 
-    # 웹사이트 검사
+    # 웹사이트 검사 아니면 error_data에 추가
     if len(users["website"]) < 1:
         error_data.append("website")
 
-    # 오류가 있으면 False 반환
-    if error_data is True:
-        print(error_data)
-        return False
+    # error_data에 데이터 2개 이상이면 리스트, False 반환 아니면 False 반환
+    if error_data:
+        if len(error_data) >= 2:
+            print(list(error_data))
+            return False
+        else:
+            return False
 
-    # 모두 통과하면 True 반환
+    # 아니면 True 반환
     return True
 
 
