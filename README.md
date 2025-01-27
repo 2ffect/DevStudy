@@ -21,6 +21,6 @@ and [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.01.25. - add [Reverse_pop(index)](/TIL/Python/Reverse_pop(index).md)
 
-
+2025.01.27. - feat [problem](/TIL/Python/problem/)
 
 ---
