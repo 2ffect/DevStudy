@@ -315,19 +315,25 @@ def create_user(user_data):
         # print(users)
         result = is_validation(users)
         # print(result)
+
         if result == 'blocked': # True 이면 blocked 인 것 잘못 된 인원에 +1 
             count += 1
             continue
 
         # 이때, 반환 받은 값이 False인 경우, 잘못된 데이터에는 None을 할당하여 데이터를 생성한다.
         # 또한, 반환 받은 값이 False이거나 'blocked'인 경우를 모두 세어, '잘못된 데이터로 구성된 유저의 수는 {개수} 입니다.' 를 출력한다.
+
         # 단,'blocked'가 반환된 경우, 해당 유저 정보는 user_list에 추가하지 않는다.
         # 완성된 user_list를 출력한다.
-        elif result == False: # False 일 때도 count +1
+        if result is False: # False 일 때도 count +1
             count += 1
-            continue
-        else:
-            pass
+            # 잘못된 데이터에 None을 할당
+            for key in users.keys():
+                # print(key)
+                users[key] = None
+            user_list.append(users)
+        # else:
+            user_list.append(users)
 
     print(f'잘못된 데이터로 구성된 유저의 수는 {count} 입니다.')
     print(user_list)
@@ -338,7 +344,7 @@ def create_user(user_data):
 
 def is_validation(users):
     error_data = []
-    error_keys = []
+
         # 블랙리스트에 속해 있으면 'blocked' 반환 아니면 아래 순차 진행
     if users['company'] in black_list:
         return 'blocked'
@@ -355,27 +361,25 @@ def is_validation(users):
     # 혈액형 검사 아니면 error_data에 추가
     if users["blood_group"] not in blood_types:
         error_data.append("blood_group")
-        error_keys.append(["blood_group"])
+
 
     # 이메일 검사 아니면 error_data에 추가
     if "@" not in users["mail"]:
         error_data.append("mail")
-        error_keys.append(["mail"])
+
 
     # 이름 검사 아니면 error_data에 추가
     if not (2 <= len(users["name"]) <= 30):
         error_data.append("name")
-        error_keys.append(["name"])
 
     # 웹사이트 검사 아니면 error_data에 추가
     if len(users["website"]) < 1:
         error_data.append("website")
-        error_keys.append(["website"])
         
     # error_data에 데이터 2개 이상이면 False + 리스트 반환 & 0 ~ 1개 면 False 반환
     if error_data:
         if len(error_data) >= 2:
-            return False, list(error_keys)
+            return False, error_data
         else:
             return False
 
