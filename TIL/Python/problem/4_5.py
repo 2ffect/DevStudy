@@ -301,52 +301,48 @@ black_list = [
     'Warren-Stewart',
 ]
 
-
-# 이때, 반환 받은 값이 False인 경우, 잘못된 데이터에는 None을 할당하여 데이터를 생성한다.
-# 또한, 반환 받은 값이 False이거나 'blocked'인 경우를 모두 세어, '잘못된 데이터로 구성된 유저의 수는 {개수} 입니다.' 를 출력한다.
-# 단,'blocked'가 반환된 경우, 해당 유저 정보는 user_list에 추가하지 않는다.
-# 완성된 user_list를 출력한다.
-
-
 def create_user(user_data):
     user_list = []
     count = 0
     for users in user_data:
         # print(users)
         result, error_data = is_validation(users) # 이걸 두 개로 나눠 받아줘야한다..! tq 이거 때문이었다 .^^
-        print(error_data)
+        # print(result)
 
         if result == 'blocked': # True 이면 blocked 인 것 잘못 된 인원에 +1 
             count += 1
-            continue
+            continue # blocked일 때는 인원에 +1 하고 다음 users로 넘어가야 함
 
         # 이때, 반환 받은 값이 False인 경우, 잘못된 데이터에는 None을 할당하여 데이터를 생성한다.
         # 또한, 반환 받은 값이 False이거나 'blocked'인 경우를 모두 세어, '잘못된 데이터로 구성된 유저의 수는 {개수} 입니다.' 를 출력한다.
 
         # 단,'blocked'가 반환된 경우, 해당 유저 정보는 user_list에 추가하지 않는다.
         # 완성된 user_list를 출력한다.
+
+
         if result is False : # False 일 때도 count +1
             count += 1
-            # 잘못된 데이터에 None을 할당
+            # error_data 에 속해 있는 key 가져와서
             for key in error_data:
-                users[key] = None
-            user_list.append(users)
+                users[key] = None # users[key]랑 같을 때 None 값으로 변경
+            user_list.append(users) # user_list에 추가
         else:
-            user_list.append(users)
+            user_list.append(users) # 정상 데이터는 user_list에 추가
 
     print(f'잘못된 데이터로 구성된 유저의 수는 {count} 입니다.')
-    print(user_list[:5])
+    print(user_list[:5]) # 5명까지 출력
     print('이하 결과 생략...')
-
+    return None
 
         
 
 def is_validation(users):
     error_data = []
 
-        # 블랙리스트에 속해 있으면 'blocked' 반환 아니면 아래 순차 진행
+    # 블랙리스트에 속해 있으면 'blocked' 반환 아니면 아래 순차 진행
     if users['company'] in black_list:
         return 'blocked', None
+    
         # blood_group의 값이 blood_types에 포함되어 있는가.
         # company의 값이 black_list에 포함되어 있지 않은가.
         # mail의 값에 @ 문자열이 포함되어 있는가.
@@ -375,7 +371,7 @@ def is_validation(users):
     if len(users["website"]) < 1:
         error_data.append("website")
         
-    # error_data에 데이터 2개 이상이면 False + 리스트 반환 & 0 ~ 1개 면 False 반환
+    # error_data에 데이터 있으면 False, error_data 반환 
     if len(error_data) >= 1:
         return False, error_data
         
@@ -383,4 +379,4 @@ def is_validation(users):
     return True, None
 
 
-print(create_user(user_data))
+create_user(user_data)
