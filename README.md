@@ -23,6 +23,8 @@ and [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.01.27. - feat [problem](/TIL/Python/problem/)
 
-2025.02.02. - add [OOP1](/TIL/Python/oop1.md)
+2025.02.03. - add [OOP1](/TIL/Python/OOP1.md)
+
+2025.02.04. - add [OOP2](/TIL/Python/OOP2.md)
 
 ---
