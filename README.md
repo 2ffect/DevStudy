@@ -6,10 +6,6 @@
 
 2025.01.17. - add [Git reset](/TIL/Git/GitReset.md) , [Git revert](/TIL/Git/GitRevert.md)
 
-2025.01.18. - feat [Algorithm](/Algorithm/)
-
-2025.01.20. - feat [Baekjoon](/Algorithm/Baekjoon/) , add [8958.py](/Algorithm/Baekjoon/Python/8958.py)
-
 2025.01.21. - add [Python_Basic_syntax.md](/TIL/Python/Python_Basic_syntax.md) and [Deepcopy](/TIL/Python/Deepcopy.md)
 
 2025.01.22. - add [Functions](/TIL/Python/Functions.md)
@@ -26,5 +22,7 @@ and [Enumerate](/TIL/Python/Enumerate.md)
 2025.02.03. - add [OOP1](/TIL/Python/OOP1.md)
 
 2025.02.04. - add [OOP2](/TIL/Python/OOP2.md) and [Exception](/TIL/Python/Exception.md)
+
+2025.02.05 - feat [APS](/TIL/APS/)
 
 ---
