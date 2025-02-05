@@ -23,7 +23,7 @@
 
 
 # Git-flow 이해하기
-![alt text](../img/gitbranch.png)
+![alt text](/TIL/Git/img/gitbranch.png)
 
 - Git-flow는 Git 브랜치 관리 모델 중 하나로 하나의 프로젝트에서 팀원들이 원할하게 협업하기 위해 브랜치를 활용하는데 이 Git 브랜치를 쉽게 관리 할 수 있도록 적용한 모델.
 

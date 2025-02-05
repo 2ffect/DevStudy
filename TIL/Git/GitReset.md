@@ -5,7 +5,7 @@
     - 명령어 : git reset **[옵션] commit id**
     - 작동원리
         - 특정 commit으로 되돌아 갔을 때, 되돌아 간 commit 이후의 commit은 모두 삭제됨
-        ![alt text](img/gitreset.png)
+        ![alt text](/TIL/Git/img/gitreset.png)
 
     - 3가지 옵션
     - **--soft**, **--mixed**, **--hard**
@@ -16,6 +16,6 @@
             - 삭제 된 commit의 기록을 working directory에 남김 (기본 옵션)
         - **--hard**
             - 삭제 된 commit의 기록을 모두 삭제, 남기지 않음
-            ![alt text](../img/resetoption.png)
+            ![alt text](/TIL/Git/img/resetoption.png)
 
     
