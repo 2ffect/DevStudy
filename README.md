@@ -23,6 +23,6 @@ and [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.02.04. - add [OOP2](/TIL/Python/OOP2.md) and [Exception](/TIL/Python/Exception.md)
 
-2025.02.05 - feat [APS](/TIL/APS/)
+2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/APS/)
 
 ---
