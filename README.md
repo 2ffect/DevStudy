@@ -25,4 +25,6 @@ docs [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/Algorithm_Problem_Solving/) docs [Basic.md](/TIL/Algorithm_Problem_Solving/0205/Basic.md) docs [problem](/TIL/Algorithm_Problem_Solving/0205/)
 
+2025.02.06 - docs [Basic.md](/TIL/Algorithm_Problem_Solving/Basic.md)
+
 ---

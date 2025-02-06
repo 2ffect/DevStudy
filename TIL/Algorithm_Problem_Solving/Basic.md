@@ -1,4 +1,5 @@
 # Algorithm Problem Solving
+# 250205
 ## APS 기본 학습 목표
 - 입출력을 제외한 내장함수 사용하지 않기
 - 기본적인 내장함수의 동작원리 이해 하기
@@ -78,7 +79,7 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 [test_1.py](/TIL/Algorithm_Problem_Solving/0205/arr_test_1.py)
 
 ### 배열 연습문제 2
-- Gravity
+-  N개의 정수가 들어있는 배열에서 이웃한 M개의 합 계산
 [test_2.py](/TIL/Algorithm_Problem_Solving/0205/arr_test_2.py)
 
 ## 정렬 (Sort)
@@ -93,3 +94,39 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 - 인접한 두 개의 원소를 비교하며 자리를 계속 교환하는 방식
 - 시간 복잡도
   - O(n^2)
+
+# 250206
+### 카운팅 정렬 (Counting Sort)
+- 각 항목이 몇 개씩 있는지 세는 작업을 통해 선형 시간에 정렬하는 효율적인 알고리즘
+
+- 제한사항
+  - 정수나 정수로 표현할 수 있는 자료에 대해서만 적용 가능
+  - 집합 내의 가장 큰 정수를 알아야 함
+
+- 시간 복잡도
+  - O(n+k) : n은 리스트 길이, k는 정수 최댓값
+
+[counting_test_1.py](/TIL/Algorithm_Problem_Solving/0206/counting_test_1.py)
+
+### 완전 검색
+- 모든 경우의 수를 나열해 확인하는 기법
+- Brute-force 혹은 generate-and-test 기법이라고 함
+- 모든 경우의 수를 테스트 후 최종 해법을 도출
+- 경우의 수가 상대적으로 작을 때 유용함
+- 속도는 느리지만 해답을 찾아내지 못할 확률이 작다.
+
+[permutation.py](/TIL/Algorithm_Problem_Solving/0206/permutation.py)
+
+ 
+### 탐욕(Greedy) 알고리즘
+- 최적해를 구하는 데 사용되는 근시안적인 방법
+- 그 순간에 최적이라고 생각되는 것을 선택해 나가는 방식
+- 최종 해답을 만들었다고 해서 그것이 최적이라는 보장은 없음
+- 일반적으로 머릿속에 떠오르는 생각을 바로 구현하면 Greedy 접근이 된다.
+
+### 탐욕 알고리즘 동작 과정
+1. 해 선택 : 부분 문제의 최적의 해를 구한 뒤 이를 부분해집합에 추가
+2. 실행 가능성 검사 : 새로운 부분해 집합이 실행 가능한지 확인 (문제의 제약 조건을 위반하지 않는지 검사)
+3. 해 검사 : 새로운 부분해 집합의 해가 되는지 확인 (안된다면 1부터 반복)
+
+[baby_gin.py](/TIL/Algorithm_Problem_Solving/0206/baby_gin.py)
