@@ -130,3 +130,49 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 3. 해 검사 : 새로운 부분해 집합의 해가 되는지 확인 (안된다면 1부터 반복)
 
 [baby_gin.py](/TIL/Algorithm_Problem_Solving/0206/baby_gin.py)
+
+
+# 2차원 배열
+## 2차원 배열의 선언
+- 1차원 List를 묶어놓은 List
+- 2차원 이상의 다차원 List는 차원에 따라 Index를 선언
+- 2차원 List의 선언 : 세로길이 (행의 수), 가로길이(열의 수)를 필요로 함
+- Python 에서는 데이터 초기화를 통해 변수선언과 초기화 가능
+
+## 2차원 배열 접근 & 저장
+```python
+arr = [[0, 1, 2, 3], [4, 5 ,6, 7]] # (2행 4열의 2차원 배열)
+```
+<br>
+
+![list1.png](img/list1.png)
+<br>
+
+```python
+N = int(input())
+arr = [list(map(int, input().split())) for _ in range(N)]
+
+N = int(input())
+arr = [list(map(int, input())) for _ in rnage(N)]
+```
+
+### 배열 순회
+- n X m 배열의 n * m 개의 모든 원소를 빠짐없이 조사하는 법
+
+### 행 우선 순회
+![alt text](/TIL/Algorithm_Problem_Solving/img/i.png)
+
+```py
+arr = [[1 2 3], [4 5 6], [7 8 9]]
+
+### 행 우선 순회
+for i in range(N):      # 행
+    for j in range(N):  # 열
+        print(arr[i][j]) # arr[행][열]
+        # 1 2 3 4 5 6 7 8 9
+```
+
+### 델타를 이용한 2차원 배열 탐색
+- 2차 배열의 한 좌표에서 4방향 인접 배열 요소를 탐색하는 방법
+- 인덱스 (i, j) 인 칸의 상하좌우 칸칸 (ni, nj)
+
