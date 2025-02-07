@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("C:/Users/SSAFY/Desktop/JH/input1.txt", "r")
+sys.stdin = open("9386.txt", "r")
 
 T = int(input())
 for tc in range(1, T+1):

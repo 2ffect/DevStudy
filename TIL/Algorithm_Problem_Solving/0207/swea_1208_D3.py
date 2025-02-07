@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("C:/Users/SSAFY/Desktop/JH/dump.txt", "r")
+sys.stdin = open("1208.txt", "r")
 
 T = 10
 for tc in range(1, T+1):

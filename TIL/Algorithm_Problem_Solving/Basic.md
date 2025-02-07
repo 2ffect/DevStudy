@@ -176,3 +176,11 @@ for i in range(N):      # 행
 - 2차 배열의 한 좌표에서 4방향 인접 배열 요소를 탐색하는 방법
 - 인덱스 (i, j) 인 칸의 상하좌우 칸칸 (ni, nj)
 
+
+## Jayden
+### 전치 
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+reverse = list(map(list, zip(*matrix)))
+
+### 90도 시계방향 회전
+90_turn = list(map(list, zip(*matrix[::-1])))
