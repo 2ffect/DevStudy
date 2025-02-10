@@ -23,8 +23,16 @@ docs [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.02.04. - docs [OOP2](/TIL/Python/OOP2.md) docs [Exception](/TIL/Python/Exception.md)
 
-2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/Algorithm_Problem_Solving/) docs [Basic.md](/TIL/Algorithm_Problem_Solving/0205/Basic.md) docs [problem](/TIL/Algorithm_Problem_Solving/0205/)
+2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/Algorithm_Problem_Solving/) docs [Basic.md](/TIL/Algorithm_Problem_Solving/Basic.md)
 
-2025.02.06 - docs [Basic.md](/TIL/Algorithm_Problem_Solving/Basic.md) docs [swea_1206_view](TIL/Algorithm_Problem_Solving/0205/swea_1206_view.py)
+2025.02.06 - docs [Basic.md](/TIL/Algorithm_Problem_Solving/Basic.md) solve [1206_view](TIL/Algorithm_Problem_Solving/0205/1206_view.py)
+
+2025.02.07 - solve [0207](/TIL/Algorithm_Problem_Solving/0207/)
+
+2025.02.09 - solve [0209](/TIL/Algorithm_Problem_Solving/0209/)
+
+2025.02.10 - docs [Search.md](/TIL/Algorithm_Problem_Solving/Search.md) docs [Selection_Sort.md](/TIL/Algorithm_Problem_Solving/Selection_Sort.md)
+solve [0210](/TIL/Algorithm_Problem_Solving/0210/)
+
 
 ---
