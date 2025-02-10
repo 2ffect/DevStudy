@@ -15,19 +15,17 @@ for tc in range(1, T+1):
         for j in range(M):
             # 타격점
             num = arr[i][j]
-            # 타격점에서 상하좌우 각 1칸씩
+            # num이 1 이면 타격점에서 상하좌우 각 1칸씩
             for d in range(4):
                 ni = i + di[d]
-                nj = i + dj[d]
-                # 타격점이 1 보다 크면 그 숫자만큼 더 가
-                if num > 1:
-                    for c in range(2, N):
-                        ni = i + di[d] + (di[d] * c)
-                        nj = j + dj[d] + (di[d] * c)
+                nj = j + dj[d]
+                if num != 1:
+                    for c in range(1, N+1):
+                        ni = i + (ni * c)
+                        nj = j + (nj * c)
 
                         if 0 <= ni < N and 0 <= nj < M:
                             num += arr[ni][nj]
-
                 if 0 <= ni < N and 0 <= nj < M:
                     num += arr[ni][nj]
 
