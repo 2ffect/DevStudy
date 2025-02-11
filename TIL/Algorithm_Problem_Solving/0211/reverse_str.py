@@ -1,22 +1,22 @@
-# 문자열 뒤집기
-# s = 'Reverse this strings'
-# s = s[::-1]
-# print(s)
+문자열 뒤집기
+s = 'Reverse this strings'
+s = s[::-1]
+print(s)
 
-# 문자열을 리스트로 변환 후 뒤집기
-# str = 'abcd'
-# string = list(str)
-# string.reverse()
-# result = ''.join(string)
-#
-# print(result)
+문자열을 리스트로 변환 후 뒤집기
+str = 'abcd'
+string = list(str)
+string.reverse()
+result = ''.join(string)
 
-# 인풋받은 문자열을 뒤집기
-# txt = list(input())
-# N = len(txt)
-# for i in range(N//2):
-#     txt[i], txt[N-1-i] = txt[N-1-i], txt[i]
-# print(f'{"".join(txt)}')
+print(result)
+
+인풋받은 문자열을 뒤집기
+txt = list(input())
+N = len(txt)
+for i in range(N//2):
+    txt[i], txt[N-1-i] = txt[N-1-i], txt[i]
+print(f'{"".join(txt)}')
 
 # 회문 찾기
 N = int(input())
