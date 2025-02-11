@@ -1,11 +1,8 @@
 import sys
-
 sys.stdin = open("1221_input.txt", "r")
-
+# GNS
 
 T = int(input())
-
-# GNS
 
 for tc in range(1):
     title = list(map(str, input().split()))
