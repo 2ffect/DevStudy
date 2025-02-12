@@ -4,18 +4,18 @@ sys.stdin = open("1221_input.txt", "r")
 
 T = int(input())
 
-for tc in range(1):
+for tc in range(1, T+1):
     title = list(map(str, input().split()))
     arr = list(map(str, input().split()))
     num = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
-    counts = [0] * 10
 
-    temp = [""]
+    new_list = []
 
-    arr_len = int(title[1])
-    print(arr_len)
-
+    for i in num:
+        for j in arr:
+            if j == i:
+                new_list.append(j)
 
     result = ' '.join(new_list)
 
-    print(f'{title[0]} {result}')
+    print(f'{title[0]} \n{result}')
