@@ -76,11 +76,11 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 
 ### 배열 연습문제 1
 - N 개의 양의 정수에서 가장 큰 수와 가장 작은 수의 차이 출력
-[test_1.py](/TIL/Algorithm_Problem_Solving/0205/arr_test_1.py)
+[test_1.py](/TIL/Algorithm_Problem_Solving/250205/arr_test_1.py)
 
 ### 배열 연습문제 2
 -  N개의 정수가 들어있는 배열에서 이웃한 M개의 합 계산
-[test_2.py](/TIL/Algorithm_Problem_Solving/0205/arr_test_2.py)
+[test_2.py](/TIL/Algorithm_Problem_Solving/250205/arr_test_2.py)
 
 ## 정렬 (Sort)
 - 2개 이상의 자료를 특정 기준에 의해 작은 값부터 큰 값 혹은 반대로 재배열 하는 것
@@ -108,7 +108,7 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 - 시간 복잡도
   - O(n+k) : n은 리스트 길이, k는 정수 최댓값
 
-[counting_test_1.py](/TIL/Algorithm_Problem_Solving/0206/counting_test_1.py)
+[counting_test_1.py](/TIL/Algorithm_Problem_Solving/250206/counting_test_1.py)
 
 ### 완전 검색
 - 모든 경우의 수를 나열해 확인하는 기법
@@ -117,7 +117,7 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 - 경우의 수가 상대적으로 작을 때 유용함
 - 속도는 느리지만 해답을 찾아내지 못할 확률이 작다.
 
-[permutation.py](/TIL/Algorithm_Problem_Solving/0206/permutation.py)
+[permutation.py](/TIL/Algorithm_Problem_Solving/250206/permutation.py)
 
  
 ### 탐욕(Greedy) 알고리즘
@@ -131,7 +131,7 @@ arr[idx] = 20 # 배열 arr의 idx번 원소에 20을 저장
 2. 실행 가능성 검사 : 새로운 부분해 집합이 실행 가능한지 확인 (문제의 제약 조건을 위반하지 않는지 검사)
 3. 해 검사 : 새로운 부분해 집합의 해가 되는지 확인 (안된다면 1부터 반복)
 
-[baby_gin.py](/TIL/Algorithm_Problem_Solving/0206/baby_gin.py)
+[baby_gin.py](/TIL/Algorithm_Problem_Solving/250206/baby_gin.py)
 
 
 # 2차원 배열
