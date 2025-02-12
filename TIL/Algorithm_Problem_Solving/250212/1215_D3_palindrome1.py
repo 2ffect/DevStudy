@@ -2,15 +2,18 @@
 # 시작 시간 : 2/12 17:00
 # 종료 시간 : 2/12 17:21 실패.
 
-#2차 시도
-# 시작 시간 :
-# 종료 시간 :
+# 2차 시도 (이어서)
+# 시작 시간 : 2/12 20:00
+# 종료 시간 : 2/12 20:22
+# 성수린의 도움으로 성공
+
+# 3차시
 
 
 import sys
 sys.stdin = open("1215_input.txt", 'r')
 
-for tc in range(1):
+for tc in range(1, 11):
     n = int(input())
     arr = [list(input()) for _ in range(8)]
 
@@ -21,17 +24,33 @@ for tc in range(1):
     # 회문의 조건에 맞는다면 cnt += 1
 
     cnt = 0
-    # 행 순회 하며 회문 찾기
-    for i in range(8-n+1):
-        # 회문 범위를 가져와서, 회문이 맞는
-        # cd 지 비교.
-        for j in range(n):
-            # 회문 조건에 안 맞으면 종료하고 i 구간 이동. break 사용.
+    # 행 순회하며 회문 찾기
+    for i in range(8):
+        for j in range(8-n+1):
+            # 회문 범위를 가져와서, 회문이 맞는지 비교.
+            for k in range(n):
+                # 회문 조건에 안 맞으면 종료하고 i 구간 이동. break 사용.
+                if arr[i][j+k] != arr[i][j+n-1-k]:
+                    break
 
+            # 회문이면 cnt +1
+            else:
+                cnt += 1
 
-        # 회문이면 cnt +1 하고 for i 순회
-        else:
-            cnt += 1
+    # 열 순회하며 회문 찾기
+    # 행 기준의 arr 를 시계 방향으로 90도 회전하면 열이 행이 됨
+    arr_2 = list(zip(*arr[::-1]))
 
+    for i in range(8):
+        for j in range(8-n+1):
+            # 회문 범위를 가져와서, 회문이 맞는지 비교.
+            for k in range(n):
+                # 회문 조건에 안 맞으면 종료하고 i 구간 이동. break 사용.
+                if arr_2[i][j+k] != arr_2[i][j+n-1-k]:
+                    break
 
-    print(cnt)
+            # 회문이면 cnt +1
+            else:
+                cnt += 1
+
+    print(f'#{tc} {cnt}')
