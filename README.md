@@ -23,19 +23,19 @@ docs [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.02.04. - docs [OOP2](/TIL/Python/OOP2.md) docs [Exception](/TIL/Python/Exception.md)
 
-2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/Algorithm_Problem_Solving/) docs [APS_Basic.md](/TIL/Algorithm_Problem_Solving/APS_Basic.md)
+2025.02.05 - feat [Algorithm_Problem_Solving](/TIL/Algorithm_Problem_Solving/) docs [APS_Basic](/TIL/Algorithm_Problem_Solving/APS_Basic.md)
 
-2025.02.06 - docs [APS_Basic.md](/TIL/Algorithm_Problem_Solving/APS_Basic.md) solve [1206_view](TIL/Algorithm_Problem_Solving/250205/1206_view.py)
+2025.02.06 - docs [APS_Basic](/TIL/Algorithm_Problem_Solving/APS_Basic.md) solve [1206_view](TIL/Algorithm_Problem_Solving/250205/1206_view.py)
 
-2025.02.07 - solve [250207](/TIL/Algorithm_Problem_Solving/250207/) docs [APS_Subset_sum.md](/TIL/Algorithm_Problem_Solving/APS_Subset_sum.md)
+2025.02.07 - solve [250207](/TIL/Algorithm_Problem_Solving/250207/) docs [APS_Subset_sum](/TIL/Algorithm_Problem_Solving/APS_Subset_sum.md)
 
 2025.02.09 - solve [250209](/TIL/Algorithm_Problem_Solving/250209/)
 
-2025.02.10 - docs [APS_Search.md](/TIL/Algorithm_Problem_Solving/APS_Search.md) docs [APS_Selection_Sort.md](/TIL/Algorithm_Problem_Solving/APS_Selection_Sort.md)
+2025.02.10 - docs [APS_Search](/TIL/Algorithm_Problem_Solving/APS_Search.md) docs [APS_Selection_Sort](/TIL/Algorithm_Problem_Solving/APS_Selection_Sort.md)
 solve [250210](/TIL/Algorithm_Problem_Solving/250210/)
 
-2025.02.11. - docs [APS_String.md](/TIL/Algorithm_Problem_Solving/APS_String.md)
+2025.02.11. - docs [APS_String](/TIL/Algorithm_Problem_Solving/APS_String.md) solve [250211](/TIL/Algorithm_Problem_Solving/250211/)
 
-2025.02.12. - docs [APS_String.md](/TIL/Algorithm_Problem_Solving/APS_String.md)
+2025.02.12. - docs [APS_Pattern](/TIL/Algorithm_Problem_Solving/APS_Pattern.md) docs [kmp](TIL/Algorithm_Problem_Solving/250212/kmp.py) docs [pattern_1](TIL/Algorithm_Problem_Solving/250212/pattern_1.py) docs [pattern_2](TIL/Algorithm_Problem_Solving/250212/pattern_2.py) solve [250212](TIL/Algorithm_Problem_Solving/250212)
 
 ---
