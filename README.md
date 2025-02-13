@@ -38,4 +38,6 @@ solve [250210](/TIL/Algorithm_Problem_Solving/250210/)
 
 2025.02.12. - docs [APS_Pattern](/TIL/Algorithm_Problem_Solving/APS_Pattern.md) docs [kmp](TIL/Algorithm_Problem_Solving/250212/kmp.py) docs [pattern_1](TIL/Algorithm_Problem_Solving/250212/pattern_1.py) docs [pattern_2](TIL/Algorithm_Problem_Solving/250212/pattern_2.py) solve [250212](TIL/Algorithm_Problem_Solving/250212)
 
+2025.02.13. - docd [APS_Stack](TIL/Algorithm_Problem_Solving/APS_Stack.md)
+
 ---
