@@ -1,43 +1,42 @@
 # 5201. [파이썬 S/W 문제해결 구현] 3일차 - 컨테이너 운반
 
 # 1차 시도
-# 시작 시간 : 17:00
-# 종료 시간 : 17:30 실패
+# 시작 시간 : 02/13 17:00
+# 종료 시간 : 02/13 17:30 실패
+
+# 2차 시도
+# 시작 시간 : 02/15 11:00
+# 종료 시간 : 02/15 12:00 실패
+
+# 3차 시도
+# 시작 시간 : 02/15 12:10
+# 종료 시간 : 02/15 13:00 실패
 
 
 
 import sys
-sys.stdin = open("5201_input.txt", "r")
+# sys.stdin = open("5201_input.txt", "r")
 
 T = int(input())
 
 for tc in range(1, T+1):
-    # 컨테이너와 트럭 수
-    ct, truck = map(int, input().split())
+    # 컨테이너 수  N 와 트럭 수 M
+    N, M = map(int, input().split())
     # 컨테이너 무게
-    ct_w = list(map(int, input().split()))
-    # 트럭의 적재 량
-    truck_t = list(map(int, input().split()))
+    ct = list(map(int, input().split()))
+    # 트럭의 적재량
+    truck = list(map(int, input().split()))
 
-    # 트럭과 컨테이너 무게를 내림 차순 솔트 한 뒤
-    # 각 각 순회하며 비교하여 적재 가능하면 cnt 에 추가 다음으로 넘어가기
-    ct_w.sort(reverse = True)
-    truck_t.sort(reverse = True)
+    # 트럭의 수와 컨테이너의 수를 비교하여 기준을 달리 해야함.
+    # 트럭의 수가 많을 경우, 트럭을 기준으로 컨테이너를 순회하며 비교.
+    # 컨테이너 수가 많을 경우, 컨테이너를 기준으로 트럭을 순회하며 비교.
+    # 트럭의 적재량 컨테이너의 무게를 각 각 내림차순 정렬한다.
 
-    print('c :', ct_w)
-    print('t :', truck_t)
+    ct.sort(reverse=True)
+    truck.sort(reverse=True)
 
-    cnt = 0
-    ans = 1
-    for c in ct_w:
-        for t in truck_t:
-            if c > t:
-                break
-            if t >= c:
-                cnt += c
-                ans = 0
-                break
-        if ans == 0:
-            ans = 1
-            break
-    print(cnt)
+    # 옮겨진 화물의 전체 무게
+    total_w = 0
+
+    print(f'#{tc} {total_w}')
+
