@@ -21,10 +21,10 @@ for i in range(N):
 # count[i] 까지의 합계 구하기
 for i in range(1, len(counts)):
     counts[i] += counts[i-1]
-    print(counts)
+print(counts)
 
 
 for i in range(N-1, -1, -1):
     counts[data[i]] -= 1
     temp[counts[data[i]]] = data[i]
-    print(temp)
+print(temp)
