@@ -12,10 +12,13 @@
 # 시작 시간 : 02/15 12:10
 # 종료 시간 : 02/15 13:00 실패
 
-
+# 제한 시간 2시간
+# 4차 시도
+# 시작 시간 : 02/16 15:55
+# 종료 시간 : 02/16 17:16 성공
 
 import sys
-# sys.stdin = open("5201_input.txt", "r")
+sys.stdin = open("5201_input.txt", "r")
 
 T = int(input())
 
@@ -27,16 +30,30 @@ for tc in range(1, T+1):
     # 트럭의 적재량
     truck = list(map(int, input().split()))
 
-    # 트럭의 수와 컨테이너의 수를 비교하여 기준을 달리 해야함.
-    # 트럭의 수가 많을 경우, 트럭을 기준으로 컨테이너를 순회하며 비교.
-    # 컨테이너 수가 많을 경우, 컨테이너를 기준으로 트럭을 순회하며 비교.
-    # 트럭의 적재량 컨테이너의 무게를 각 각 내림차순 정렬한다.
-
+    # 맨 앞이 가장 큰 수
     ct.sort(reverse=True)
     truck.sort(reverse=True)
 
-    # 옮겨진 화물의 전체 무게
+    # 최종 운반 무게
     total_w = 0
+    # i 는 항상 0으로 고정
+    i = 0
+    # 최대 반복 횟수는 컨테이너와 트럭의 수를 비교해 더 많은 만큼
+    max_try = max(N, M)
+
+    for _ in range(max_try):
+        # 트럭의 길이나 컨테이너의 길이가 0 이상 일 경우만 가장 첫 값을 비교해서 트럭이 크면 적재, 아니면 적재 불가
+        if len(truck) != 0 and len(ct) != 0:
+            if truck[i] >= ct[i]:
+                total_w += ct[i]
+                ct.pop(i)
+                truck.pop(i)
+            # 컨테이너가 더 크면 일단 컨테이너 제거, 다음 컨테이너 적재 가능성 있음.
+            else:
+                ct.pop(i)
+
+        # 가장 큰 컨테이너 무게가 가장 큰 적재량보다 무거우면 적재 불가 break
+        else:
+            break
 
     print(f'#{tc} {total_w}')
-
