@@ -91,7 +91,7 @@ if top > -1: # pop()
   - 이를 해결하기 위한 방법으로 저장소를 동적으로 할당하여 구현 (동적 연결리스트를 구현하는 것)
   - 동적 연결 리스트 : 구현이 복잡하지만 메모리를 효율적으로 사용함.
 
-[스택 구현 연습문제](/DevStudy/TIL/Algorithm_Problem_Solving/250213/stack_1.py)
+[스택 구현 연습문제](/DevStudy/Algorithm_Problem_Solving213/stack_1.py)
 
 ## 스택의 응용 1 : 괄호 검사
 - 괄호의 종류 : 대괄호 ('[', ']'), 중괄호 ('{', '}'), 소괄호 ('(', ')')
@@ -103,7 +103,7 @@ if top > -1: # pop()
   2. 같은 괄호 왼쪽 괄호는 오른쪽 괄호보다 먼저 나와야 함
   3. 괄호 사이에는 포함 관계만 존재 함
   
-[스택 괄호검사 연습문제](/DevStudy/TIL/Algorithm_Problem_Solving/250213/stack_2.py)
+[스택 괄호검사 연습문제](/DevStudy/Algorithm_Problem_Solving213/stack_2.py)
 
 ## 스택의 응용 2 : Function Call
 ### Function call
