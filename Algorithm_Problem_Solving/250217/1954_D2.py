@@ -4,6 +4,10 @@
 # 시작 시간 : 02/17 11:30
 # 종료 시간 : 02/17 12:40 실패
 
+# 2차 시도
+# 시작 시간 :
+# 종료 시간 :
+
 
 
 import sys
@@ -21,6 +25,9 @@ for tc in range(1):
     # 숫자가 들어갈 배열을 생성
     arr = [list([0] * N) for _ in range(N)]
 
-    # 배열을 순회하면서 각 배열을 num_list로 바꿔줘야 함
+    # 4 방향으로 간다.
+    di = [0, 1, 0, -1]
+    dj = [1, 0, -1, 0]
 
-    print(arr)
+    for i in range(N):
+        for j in range(N):
