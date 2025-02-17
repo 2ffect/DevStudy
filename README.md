@@ -46,4 +46,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.02.16 - review [250216](Algorithm_Problem_Solving/250216)
 
+2025.02.17 docs [APS_Backtracking](Algorithm_Problem_Solving/APS_Backtracking.md) solve [250217](Algorithm_Problem_Solving/250217)
+
 ---
