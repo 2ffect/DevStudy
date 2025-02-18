@@ -15,7 +15,7 @@ sys.stdin = open("1954_input.txt", "r")
 
 T = int(input())
 
-for tc in range(1):
+for tc in range(1, T+1):
     N = int(input())
     arr = [list([0] * N) for _ in range(N)]
 
@@ -25,9 +25,10 @@ for tc in range(1):
     i = 0
     j = 0
     d = 0
+    cnt = 1
     cnt += 1
 
-    while cnt <= N*N:
+    while cnt <= (N*N):
         ni = i + di[d]
         nj = j + dj[d]
         if (0 <= ni < N) and (0 <= nj < N) and arr[i][j] == 0:
