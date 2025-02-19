@@ -23,33 +23,33 @@ docs [Enumerate](/TIL/Python/Enumerate.md)
 
 2025.02.04. - docs [OOP2](/TIL/Python/OOP2.md) docs [Exception](/TIL/Python/Exception.md)
 
-2025.02.05 - feat [Algorithm_Problem_Solving](Algorithm_Problem_Solving/) docs [APS_Basic](Algorithm_Problem_Solving/APS_Basic.md)
+2025.02.05 - feat [Algorithm_Problem_Solving](Algorithm_Problem_Solving/) docs [APS_Basic](TIL/APS_Basic.md)
 
-2025.02.06 - docs [APS_Basic](Algorithm_Problem_Solving/APS_Basic.md) solve [1206_view](Algorithm_Problem_Solving/250205/1206_view.py)
+2025.02.06 - docs [APS_Basic](TIL/APS_Basic.md) solve [1206_view](Algorithm_Problem_Solving/250205/1206_view.py)
 
-2025.02.07 - solve [250207](Algorithm_Problem_Solving/250207/) docs [APS_Subset_sum](Algorithm_Problem_Solving/APS_Subset_sum.md)
+2025.02.07 - solve [250207](Algorithm_Problem_Solving/250207/) docs [APS_Subset_sum](TIL/APS_Subset_sum.md)
 
 2025.02.09 - solve [250209](Algorithm_Problem_Solving/250209/)
 
-2025.02.10 - docs [APS_Search](Algorithm_Problem_Solving/APS_Search.md) docs [APS_Selection_Sort](Algorithm_Problem_Solving/APS_Selection_Sort.md)
+2025.02.10 - docs [APS_Search](TIL/APS_Search.md) docs [APS_Selection_Sort](TIL/APS_Selection_Sort.md)
 solve [250210](Algorithm_Problem_Solving/250210/)
 
-2025.02.11. - docs [APS_String](Algorithm_Problem_Solving/APS_String.md) solve [250211](Algorithm_Problem_Solving/250211/)
+2025.02.11. - docs [APS_String](TIL/APS_String.md) solve [250211](Algorithm_Problem_Solving/250211/)
 
-2025.02.12. - docs [APS_Pattern](Algorithm_Problem_Solving/APS_Pattern.md) docs [kmp](Algorithm_Problem_Solving/250212/kmp.py) docs [pattern_1](Algorithm_Problem_Solving/250212/pattern_1.py) docs [pattern_2](Algorithm_Problem_Solving/250212/pattern_2.py) solve [250212](Algorithm_Problem_Solving/250212)
+2025.02.12. - docs [APS_Pattern](TIL/APS_Pattern.md) docs [kmp](Algorithm_Problem_Solving/250212/kmp.py) docs [pattern_1](Algorithm_Problem_Solving/250212/pattern_1.py) docs [pattern_2](Algorithm_Problem_Solving/250212/pattern_2.py) solve [250212](Algorithm_Problem_Solving/250212)
 
-2025.02.13. - docs [APS_Stack](Algorithm_Problem_Solving/APS_Stack.md) solve [250213](Algorithm_Problem_Solving/250213)
+2025.02.13. - docs [APS_Stack](TIL/APS_Stack.md) solve [250213](Algorithm_Problem_Solving/250213)
 
-2025.02.14. - docs [APS_DP_DFS](Algorithm_Problem_Solving/APS_DP_DFS.md) docs [APS_Memoization](Algorithm_Problem_Solving/APS_Memoization.md) solve [250214](Algorithm_Problem_Solving/250214)
+2025.02.14. - docs [APS_DP_DFS](TIL/APS_DP_DFS.md) docs [APS_Memoization](TIL/APS_Memoization.md) solve [250214](Algorithm_Problem_Solving/250214)
 
 2025.02.15 - solve [250215](Algorithm_Problem_Solving/250215)
 
 2025.02.16 - review [250216](Algorithm_Problem_Solving/250216)
 
-2025.02.17 docs [APS_Backtracking](Algorithm_Problem_Solving/APS_Backtracking.md) solve [250217](Algorithm_Problem_Solving/250217)
+2025.02.17 docs [APS_Backtracking](TIL/APS_Backtracking.md) solve [250217](Algorithm_Problem_Solving/250217)
 
 2025.02.18 docs [SW_test_review](Algorithm_Problem_Solving/250218/SW_test_review.md) solve [250218](Algorithm_Problem_Solving/250218)
 
-2025.02.19 docs [APS_Queue](Algorithm_Problem_Solving/APS_Queue.md) solve [250219](Algorithm_Problem_Solving/250219)
+2025.02.19 docs [APS_Queue](TIL/APS_Queue.md) solve [250219](Algorithm_Problem_Solving/250219)
 
 ---
