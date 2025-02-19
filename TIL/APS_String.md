@@ -6,7 +6,7 @@
 - 7-bit 인코딩으로 128문자를 표현하며 33개의 출력 불가능한 제어 문자들과 공백을 비롯한 95개의 출력 가능한 문자로 이루어짐
 <br>
   
-![img.png](img/ASCII_1.png)
+![img.png](../Algorithm_Problem_Solving/img/ASCII_1.png)
 <br>
 
 - 확장 아스키는 표준 문자 이외의 악센트 문자, 도형 문자, 특수 문자, 특수 기호 등 부가적인 문자로 128개를 추가할 수 있게 하는 부호이다.
@@ -14,7 +14,7 @@
     - 표준 아스키는 마이크로 컴퓨터 하드웨어 및 소프트웨어 사이에서 세계적으로 통용되지만 확장 아스키는 해독할 수 있도록 설계되어 있어야만 올바른 해독 가능
 <br>
 
-![img.png](img/ASCII_2.png)
+![img.png](../Algorithm_Problem_Solving/img/ASCII_2.png)
 <br>
 
 - 오늘날 대부분의 컴퓨터는 문자를 읽고 쓰는데 ASCII형식을 사용함
@@ -25,7 +25,7 @@
 ## big-endian, little-endian
 <br>
 
-![img.png](img/endian.png)
+![img.png](../Algorithm_Problem_Solving/img/endian.png)
 <br>
 ## 유니코드 인코딩 (UTF: Unicode Transformation Format)
 - UTF-8 (in web) # 가변 - 상대적으로 느림
@@ -49,5 +49,5 @@
     for i in range(N//2):
   <br>
   
-![img.png](img/reverse.png)
+![img.png](../Algorithm_Problem_Solving/img/reverse.png)
 <br>

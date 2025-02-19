@@ -26,7 +26,7 @@
 - 빈 스택에 원소 A, B, C를 차례로 삽입 후 한번 삭제하는 연산 과정
 <br>
 
-![img.png](img/stack_1.png)
+![img.png](../Algorithm_Problem_Solving/img/stack_1.png)
 <br>
 
 ### 스택의 push 알고리즘
@@ -113,8 +113,8 @@ if top > -1: # pop()
   - 함수 호출이 발생하면 호출한 함수 수행에 필요한 지역변수, 매개변수 및 수행 후 복귀할 주소 등의 정보를 스택 프레임에 저장하여 시스템 스택에 삽입
 <br>
 
-![img.png](img/stack_2.png)
-![img.png](img/stack_3.png)
+![img.png](../Algorithm_Problem_Solving/img/stack_2.png)
+![img.png](../Algorithm_Problem_Solving/img/stack_3.png)
 <br>
 
   - 함수의 실행이 끝나면 시스템 스택의 top 원소(스택 프레임)를 삭제, 프레임 저장되어 있는 복귀주소 확인 후 복귀
@@ -141,7 +141,7 @@ n! = n x (n-1)!
   - 0, 1, 1, 2, 3, 5, 8, 13, ''''
   
 - 피보나치 수열의 i번째 값을 계산하는 함수 F를 정의하면 다음과 같다.
-![img.png](img/fibo.png)
+![img.png](../Algorithm_Problem_Solving/img/fibo.png)
   
 - 위의 정으로부터 피보나치 수열의 i번째 항을 반환하는 함수를 재귀함수로 구현할 수 있다.
 
@@ -185,6 +185,6 @@ def fibo(n):
     2. 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고, 연산 결과를 다시 스택에 push 한다.
     3. 수식이 끝나면 마지막으로 스택을 pop 한다.
   
-  [연습](250217/stack_test_1.py)
+  [연습](../Algorithm_Problem_Solving/250217/stack_test_1.py)
   <br>
   

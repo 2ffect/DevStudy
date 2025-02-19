@@ -13,13 +13,13 @@
 ## 알고리즘
 <br>
   
-  ![img.png](img/Selection_Sort.png)
+  ![img.png](../Algorithm_Problem_Solving/img/Selection_Sort.png)
 <br>
   
 - 선택 정렬
 <br>
   
-  ![img.png](img/Selection_Sort2.png)
+  ![img.png](../Algorithm_Problem_Solving/img/Selection_Sort2.png)
 <br>
   
 # Selection Algorithm

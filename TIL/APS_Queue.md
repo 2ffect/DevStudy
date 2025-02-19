@@ -92,7 +92,7 @@ else:                   # Queue에 원소가 남아있지 않으면
 ### 해결방법 2.
 - 1차원 배열을 사용하되, 논리적으로 배열의 처음과 끝이 연결되어 원형의 형태의 큐를 이룬다고 가정
 - 원형 큐의 논리적 구조
-![queue_1.png](img/queue_1.png)
+![queue_1.png](../Algorithm_Problem_Solving/img/queue_1.png)
   
 ### 원형큐 초기 공백 상태
 - front = rear = 0
@@ -105,7 +105,7 @@ else:                   # Queue에 원소가 남아있지 않으면
 - 공백 상태와 포화 상태로 구분을 쉽게 하기 위해 front가 있는 자리는 사용하지 않고 항상 비워둠
 
 ### 삽입 위치 및 삭제 위치
-![queue_2.png](img/queue_2.png)
+![queue_2.png](../Algorithm_Problem_Solving/img/queue_2.png)
 
 ### 원형 큐의 공백 및 포화 검사
 - 공백 : front == rear
@@ -135,11 +135,11 @@ if (front+1) & n == rear : isEmpty
 - 초기 상태 : front = rear = null
 - 공백 상태 : front = rear = null
 
-![queue_3.png](img/queue_3.png)
+![queue_3.png](../Algorithm_Problem_Solving/img/queue_3.png)
 
-![queue_4.png](img/queue_4.png)
+![queue_4.png](../Algorithm_Problem_Solving/img/queue_4.png)
 
-![queue_5.png](img/queue_5.png)
+![queue_5.png](../Algorithm_Problem_Solving/img/queue_5.png)
 
 ### [참고] deque (덱)
 - 컨테이너 자료형 중 하나

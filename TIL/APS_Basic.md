@@ -147,7 +147,7 @@ arr = [[0, 1, 2, 3], [4, 5 ,6, 7]] # (2행 4열의 2차원 배열)
 ```
 <br>
 
-![list1.png](img/list1.png)
+![list1.png](../Algorithm_Problem_Solving/img/list1.png)
 <br>
 
 ```python

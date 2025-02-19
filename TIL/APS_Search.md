@@ -26,7 +26,7 @@
   - sequential_search3.py
 <br>
   
-![img.png](img/sequential_search.png)
+![img.png](../Algorithm_Problem_Solving/img/sequential_search.png)
 <br>
 
 ## 이진검색 (Binary search)
