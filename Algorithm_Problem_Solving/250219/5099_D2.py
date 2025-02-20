@@ -50,7 +50,6 @@ for tc in range(1, T+1):
                         new_pizza = P.popleft()
                         cheese_list.append(new_pizza)
                         pizza_list.append(new_pizza)
-                        # 피자를 빼고 새로 넣었으면 녹여주기
 
                 # 치즈 리스트 안에 하나의 치즈를 제외하고 모두 0 일 경우? pizza 를 good로 바꾸고 중단해.
                 if cheese_list.count(0) == M-1:
