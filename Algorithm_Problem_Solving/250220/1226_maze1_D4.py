@@ -56,7 +56,7 @@ def start_point(N):
                 return  i, j
 
 # 미로의 크기는 모두 동일
-N = 100
+N = 16
 
 # 테케 별 인풋 받기
 for _ in range(10):
