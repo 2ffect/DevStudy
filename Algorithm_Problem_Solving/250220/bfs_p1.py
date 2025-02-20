@@ -44,6 +44,17 @@ adj_l = [[] for _ in range(V+1)]
 for i in range(E):
     v1, v2 = arr[i*2], arr[i*2+1]
     adj_l[v1].append(v2)
-    adj_l[v2].append(v1) # 방향이 없는 경우 양쪽이기 때문에 추가
+    # adj_l[v2].append(v1) # 방향이 없는 경우 양쪽이기 때문에 추가
 
 bfs(5, 7)
+
+'''
+1
+6 5
+1 4
+1 3
+2 3
+2 4
+5 6
+1 6
+'''
