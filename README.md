@@ -52,6 +52,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.02.19 docs [APS_Queue](TIL/APS_Queue.md) solve [250219](Algorithm_Problem_Solving/250219)
 
-2025.02.20 docd [APS_BFS](TIL/APS_BFS.md) solve [250220](Algorithm_Problem_Solving/250220)
+2025.02.20 docs [APS_BFS](TIL/APS_BFS.md) solve [250220](Algorithm_Problem_Solving/250220)
 
 ---
