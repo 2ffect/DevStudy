@@ -58,7 +58,7 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.02.23 dcos [pocketball](Algorithm_Problem_Solving/250223/pocketball.py) - 일타싸피
 
-2025.02.25 docs [Web_02](TIL/Web_02.md) [250225](Algorithm_Problem_Solving/250225)
+2025.02.25 docs [Web_02](TIL/Web_02.md) solve [250225](Algorithm_Problem_Solving/250225)
 
 2025.02.26 docs [Bootstrap](TIL/Bootstrap.md)
 
