@@ -33,7 +33,9 @@ def bfs(S, V):
     while q:
         # 디큐
         t = q.popleft()
+
         # 인접한 w 탐색
+
         for w in adj_l[t]:
             # 방문한 적 없는 노드라면
             if visited[w] == 0:
