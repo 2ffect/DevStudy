@@ -64,4 +64,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.02.27 docs [Responsive_Web](/DevStudy/TIL/Responsive_Web.md)
 
+2025.02.28 solve [250228](Algorithm_Problem_Solving/250228)
+
 ---
