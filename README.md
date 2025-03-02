@@ -68,4 +68,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.03.01. solve [250301](Algorithm_Problem_Solving/250301)
 
+2025.03.02. solve [250302](Algorithm_Problem_Solving/250302)
+
 ---
