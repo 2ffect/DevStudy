@@ -6,11 +6,11 @@
 def dfs(v, N):                      # v출발, N마지막 정점
     visited = [0] * (N + 1)         # 방문표시
     stack = []                      # 스택
-
+    result = []
     while True:
         if visited[v] == 0:         # 첫 방문이면
             visited[v] = 1
-            print(v)
+            result.append(str(v))
         for w in adj_list[v]:       # 인접하고 방문안한 w가 있으면
             if visited[w] == 0:
                 stack.append(v)     # 현재 정점 push
@@ -21,7 +21,9 @@ def dfs(v, N):                      # v출발, N마지막 정점
                 v = stack.pop()
             else:                   # 스택이 비어있으면
                 break
+    return result
 
+tc = 1
 V, E = map(int, input().split())
 graph = list(map(int, input().split()))
 adj_list = [[] for _ in range(V+1)]         # 인접 리스트
@@ -31,4 +33,4 @@ for i in range(E):
     adj_list[v].append(w)
     adj_list[w].append(v)                 # 방향이 없는 경우
 
-dfs(1, V)
+print(f"#{tc}", '-'.join(dfs(1, V)))
