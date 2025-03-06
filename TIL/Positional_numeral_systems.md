@@ -29,28 +29,35 @@
 - 마지막에 list를 거꾸로 뒤집기
 
 ```python
-tar = 149 
-result = []
+def decimal_to_binary(n):
+    binary_number = ""
 
-while tra != 0:
-    result.append(tar % 2)
-    tra //= 2
+    if n == 0:
+        return "0"
 
-result.reverse()
-print(result)
+    # 0보다 클 때까지 2로 나누면서 나머지를 정답에 추가
+    while n > 0:
+        remainder = n % 2
+        binary_number = str(remainder) + binary_number
+        n = n // 2
+
+    return binary_number
 
 # 아래와 같음
-bin(149)
+bin(n)
 ```
 
 ### 2진수를 10진수로 변환
 ```python
+def binary_to_decimal(binary_str):
+    decimal_number = 0
+    pow = 0
 
+    # 뒤에서부터 각 자리의 숫자를 10진수로 변환
+    for digit in reversed(binary_str):
+        if digit == '1':
+            decimal_number += 2 ** pow
+        pow += 1
 
-int(x, base)
+    return decimal_number
 ```
-
-### 16 <-> 2 진수 변환
-- 2진수, 16진수 변환은 연산이 많으나 2진수, 16진수간 변환은 연산이 없다.
-- 표 참고
-![img.png](img_for_Python/positional.png)
