@@ -12,28 +12,30 @@ def post_order(v):
 
         if my_stack:
             if num[v] == '-':
-                a = my_stack.pop()
                 b = my_stack.pop()
+                a = my_stack.pop()
                 my_stack.append(a - b)
             elif num[v] == '+':
-                a = my_stack.pop()
                 b = my_stack.pop()
+                a = my_stack.pop()
                 my_stack.append(a + b)
             elif num[v] == '/':
-                a = my_stack.pop()
                 b = my_stack.pop()
+                a = my_stack.pop()
                 my_stack.append(int(a // b))
             elif num[v] == '*':
-                a = my_stack.pop()
                 b = my_stack.pop()
+                a = my_stack.pop()
                 my_stack.append(int(a * b))
+            else:
+                my_stack.append(num[v])
 
         else:
             my_stack.append(num[v])
 
     return my_stack
 
-for tc in range(1):
+for tc in range(1, 11):
     # 정점의 수
     N = int(input())
     # 간선의 수
@@ -73,3 +75,6 @@ for tc in range(1):
 
     my_stack = []
     post_order(root)
+    result = my_stack.pop()
+
+    print(f'#{tc} {result}')
