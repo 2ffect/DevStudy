@@ -3,8 +3,6 @@
 # 시작 시간 : 02/20 14:30
 # 종료 시간 : 02/20 15:36 실패
 
-# 시작 시간 : 02/21 15:50
-# 종료 시간 :
 
 
 # 비상연락을 돌리는데, 출발 노드로부터 연락할 수 있는 최대 노드까지 연락하였을 때,
@@ -15,7 +13,7 @@
 # 마지막 그룹에 속하는 노드들 중 가장 높은 숫자를 리턴 == 결과
 
 import sys
-# sys.stdin = open("1238_input.txt", "r")
+sys.stdin = open("1238_input.txt", "r")
 from collections import deque
 
 # bfs
@@ -46,7 +44,7 @@ def bfs(S, V):
 
     return visited
 
-for tc in range(1):
+for tc in range(1, 11):
     # L = 데이터 길이, S = 시작점 (비상 연락의 시작점!!!!!!)
     L, S = map(int, input().split())
     # 데이터 리스트
@@ -88,6 +86,8 @@ for tc in range(1):
         if i in max_idx:
             for j in range(len(adj_l[i])):
                 max_list.append(adj_l[i][j])
+
+    print(max_list)
 
     # 추가 된 값 중 최대값을 찾아 출력
     print(f'#{tc} {max(max_list)}')
