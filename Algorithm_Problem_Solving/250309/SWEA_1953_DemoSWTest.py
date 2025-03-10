@@ -78,7 +78,7 @@ def bfs(r, c, L):
 
 T = int(input())
 
-for tc in range(1, T+1):
+for tc in range(1):
     # 지도 크기 N * M / 시작점 R, C / L = 탈출 후 경과시간
     N, M, R, C, L = map(int, input().split())
     pipe_map = [list(input().split()) for _ in range(N)]
