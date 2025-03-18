@@ -24,3 +24,4 @@ for tc in range(1, int(input()) + 1):
     battery = list(map(int, input().split()))
     station = battery[0]
     start_point = battery[1]
+
