@@ -54,17 +54,15 @@ def union(x, y):
     # else:
     #     parents[ref_x] = ref_y
 
-    # rank가 작은 쪽으로 병합
+    # rank 가 작은 쪽으로 병합
     if rank[ref_x] < rank[ref_y]:
         parents[ref_x] = ref_y
-
     elif rank[ref_x] > rank[ref_y]:
         parents[ref_y] = ref_x
-
     else:
-        # rank가 같다면 한 쪽으로 병합하고 rank 증가
+        # rank 가 같으면 한 쪽으로 병합하고, 대표자의 rank 증가
         parents[ref_y] = ref_x
-        rank[ref_y] += 1
+        rank[ref_x] += 1
 
 
 # 6개의 원소 (1~6)이 존재하는 경우
