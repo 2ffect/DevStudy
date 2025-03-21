@@ -8,9 +8,9 @@ def dijkstra(v):
     # 큐 생성 및 인큐
     my_q = [(0, v)]
     # 각 정점별 최단 거리를 저장할 리스트
-    dists = [float('inf')] * (N+1)
+    dists = [[float('inf')] * (N+1) for _ in range(N+1)]
     # 시작점은 0으로 초기화
-    dists[v] = 0
+    dists[v][v] = 0
 
     while my_q:
         dist, node = heapq.heappop(my_q)
