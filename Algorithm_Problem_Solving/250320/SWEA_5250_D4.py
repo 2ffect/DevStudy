@@ -1,52 +1,44 @@
 # 최소 비용
-# 그리디 bfs 프림으로 모든 정점의 최소비용을 다 확인..
-
 import sys
 sys.stdin = open('5250_input.txt')
 import heapq
 
-def prim(start_v):
+di = [0, 1, 0, -1]
+dj = [1, 0, -1, 0]
 
-    # 시작점의 가중치는 0
-    my_q = [(1, start_v)]
-    MST = [0] * N
-    # 최소 비용 저장
-    min_weight = 0
+def dijkstra():
 
+    dists = [[float('inf')] * N for _ in range(N)]
+    dists[0][0] = 0  # 시작점 초기화
 
-    while my_q:
-        weight, node = heapq.heappop(my_q)
+    pq = [(0, 0, 0)]  # (dist - 누적거리, y, x) 형태
 
-        # 이미 방문한 노드를 뽑았다면 스킵
-        if MST[node]:
-            continue
-        # 아니라면 방문처리
-        MST[node] = 1
+    while pq:
+        dist, i, j = heapq.heappop(pq)
 
-        min_node = 9999999
-        else_node = 0
-        for next_node in range(N):
-            a = graph[node][next_node]
-            b = graph[node][node]
-            c = a - b
-            if c > 0:
-                min_node = min(min_node, c)
+        for d in range(4):
+            ni = i + di[d]
+            nj = j + dj[d]
+            # 유효 할 때
+            if (0 <= ni < N) and (0 <= nj < N):
+                # 출발점과 다음 위치의 높이가 같으면 (평지면)
+                if graph[i][j] == graph[ni][nj]:
+                    new_dist = dist + 1
+                # 오르막이면
+                elif graph[ni][nj] > graph[i][j]:
+                    new_dist = dist + (graph[ni][nj] - graph[i][j]) + 1
+                # 내리막이면
+                elif graph[i][j] > graph[ni][nj]:
+                    new_dist = dist + 1
 
-            else:
-                else_node += 1
+                # 이미 더 작거나 같은 거리로 온 적이 있으면 스킵
+                if dists[ni][nj] <= new_dist:
+                    continue
 
-            if MST[next_node] == 1:
-                continue
+                dists[ni][nj] = new_dist
+                heapq.heappush(pq, (new_dist, ni, nj))
 
-            heapq.heappush(my_q, (graph[node][next_node], next_node))
-
-        else:
-            if min_node != 99999999:
-                min_weight += min_node + else_node
-            else:
-                min_weight += else_node
-
-    return min_weight
+    return dists[N - 1][N - 1]
 
 for tc in range(1, int(input()) + 1):
     # 받아올 배열의 칸(노드의 수라고 생각)
@@ -54,6 +46,6 @@ for tc in range(1, int(input()) + 1):
 
     graph = [list(map(int, input().split())) for _ in range(N)]
 
-    result = prim(0)
+    result = dijkstra()
 
     print(f'#{tc} {result}')
