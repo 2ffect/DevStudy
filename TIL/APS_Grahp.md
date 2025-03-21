@@ -51,12 +51,15 @@
 - prim
     - 시간 복잡도 : O((V+E) log V)
     - 간선을 모두 고려하면서 우선순위 큐에 넣어야함
-    -> 간선의 수가 적을 수록 유리
+  
+![img.png](prim.png)
+
 
 - kruskal 
     - 시간 복잡도 : 0(E log E)
     - 간선 위주로 정렬하는 시간만 필요
-    -> 간선의 수가 많으면 많을수록 유리
+      
+![img.png](kruskal.png)
       
 
 ## 최단경로 (Dijkstra)
