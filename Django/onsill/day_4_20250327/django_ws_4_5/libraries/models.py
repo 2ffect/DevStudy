@@ -2,7 +2,7 @@ from django.db import models
 import requests
 
 API_URL = 'https://www.aladin.co.kr/ttb/api/ItemList.aspx'
-API_KEY = 'ttbeff2ct1139002'
+API_KEY = 'KEY'
 # Create your models here.
 class Book(models.Model):
     isbn = models.CharField(max_length=10)
