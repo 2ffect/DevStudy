@@ -101,18 +101,18 @@ python manage.py migrate
   - auto_now_add : 데이터가 처음! 생성될 때만, 자동으로 현재 날짜 시간을 저장
   
   2. 이미 기존 테이블이 존재하기 때문에 필드를 추가 할 때 추가되는 필드의 기본값 설정이 필요함
-  ![alt text](Migrations2.png)
+  ![alt text](img/Migrations2.png)
   - 1번은 현재 대화를 유지하면서 기본값을 입력하는 방법
   - 2번은 현재 대화에서 나간 후 models.py에 기본값 관련 설정을 하는 방법
 
 
   3. 추가하는 필드의 기본 값을 입력해야 하는 상황
-  ![alt text](Migrations3.png)
+  ![alt text](img/Migrations3.png)
   - 날짜 데이터이기 때문에 직접 입력하기 보다는 Django가 제안하는 기본값을 사용하는 것을 권장.
   - 아무것도 입력하지 않고 enter를 누르면 Django가 제안하는 기본 값으로 설정 됨
 
   4. migrations 과정 종료 후 2번째 파일이 생성됨
-  ![alt text](Migrations4.png)
+  ![alt text](img/Migrations4.png)
   - 2번 파일은 테이블을 생성하는 내용이 없고, 필드만 추가하는 설계만 되어있기 때문에 1번 설계도에 의존이 되어있으므로 1번 설계도가 없으면 무용지물
 
   5. migrate 후 테이블 필드 확인하면 끝. 
