@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ work.work }} 상세 페이지</h1>
+  <p>num : {{ work.pk }}</p>
+  <p>work : {{ work.work }}</p>
+  <p>content : {{ work.content }}</p>
+  <p>is_completed : {{ work.is_completed }}</p>
+  <p>created_at : {{ work.created_at }}</p>
+{% endblock content %}
