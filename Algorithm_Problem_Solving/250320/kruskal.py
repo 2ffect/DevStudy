@@ -12,7 +12,7 @@ def find_set(x): # 대표자 검색
 
     # 경로 압축
     parents[x] = find_set(parents[x])
-    return  parents[x]
+    return parents[x]
 
 def union(x, y):
     ref_x = find_set(x)
