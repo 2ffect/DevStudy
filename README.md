@@ -94,38 +94,38 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.03.16. solve [250316](/DevStudy/Algorithm_Problem_Solving/250316)
 
-2025.03.17 docs [APS_Divide_and_Conquer](/DevStudy/TIL/APS_Divide_and_Conquer.md) solve [250317](/DevStudy/Algorithm_Problem_Solving/250317)
+2025.03.17. docs [APS_Divide_and_Conquer](/DevStudy/TIL/APS_Divide_and_Conquer.md) solve [250317](/DevStudy/Algorithm_Problem_Solving/250317)
 
-2025.03.18 docs [APS_Backtracking](/DevStudy/TIL/APS_Backtracking.md) solve [250318](/DevStudy/Algorithm_Problem_Solving/250318)
+2025.03.18. docs [APS_Backtracking](/DevStudy/TIL/APS_Backtracking.md) solve [250318](/DevStudy/Algorithm_Problem_Solving/250318)
 
-2025.03.19 docs [APS_Union_Find](/DevStudy/TIL/APS_Union_Find.md) docs [APS_Graph_Basic](/DevStudy/TIL/APS_Graph_Basic.md) solve [250319](/DevStudy/Algorithm_Problem_Solving/250319)
+2025.03.19. docs [APS_Union_Find](/DevStudy/TIL/APS_Union_Find.md) docs [APS_Graph_Basic](/DevStudy/TIL/APS_Graph_Basic.md) solve [250319](/DevStudy/Algorithm_Problem_Solving/250319)
 
-2025.03.20 docs [APS_Graph](/DevStudy/TIL/APS_Grahp.md) solve [250320](/DevStudy/Algorithm_Problem_Solving/253020)
+2025.03.20. docs [APS_Graph](/DevStudy/TIL/APS_Grahp.md) solve [250320](/DevStudy/Algorithm_Problem_Solving/253020)
 
-2025.03.21 solve [250321](/DevStudy/Algorithm_Problem_Solving/250321)
+2025.03.21. solve [250321](/DevStudy/Algorithm_Problem_Solving/250321)
 
-2025.03.24 docs [Djnago](/DevStudy/Django/Django_Basic.md)
+2025.03.24. docs [Djnago](/DevStudy/Django/Django_Basic.md)
 
-2025.03.25 docs [Django_Template&URLs](/DevStudy/Django/Django_Template&URLs.md)
+2025.03.25. docs [Django_Template&URLs](/DevStudy/Django/Django_Template&URLs.md)
 
-2025.03.26 docs [Django_Model](/DevStudy/Django/Django_Model.md) online [250326](/DevStudy/Django/onsill/day_3_20250326/)
+2025.03.26. docs [Django_Model](/DevStudy/Django/Django_Model.md) online [250326](/DevStudy/Django/onsill/day_3_20250326/)
 
-2025.03.27 docs [Django_ORM](/DevStudy/Django/Djang_ORM.md) online [250327](/DevStudy/Django/onsill/day_4_20250327/)
+2025.03.27. docs [Django_ORM](/DevStudy/Django/Djang_ORM.md) online [250327](/DevStudy/Django/onsill/day_4_20250327/)
 
-2025.03.28 docs [Django_ORM_with_view](/DevStudy/Django/Django_ORM_with_view.md) online [250328](/DevStudy/Django/onsill/day_5_20250328/) solve [250328](/DevStudy/Algorithm_Problem_Solving/250328)
+2025.03.28. docs [Django_ORM_with_view](/DevStudy/Django/Django_ORM_with_view.md) online [250328](/DevStudy/Django/onsill/day_5_20250328/) solve [250328](/DevStudy/Algorithm_Problem_Solving/250328)
 
-2025.03.30 solve [250330](/DevStudy/Algorithm_Problem_Solving/250330)
+2025.03.30. solve [250330](/DevStudy/Algorithm_Problem_Solving/250330)
 
-2025.03.31 docs [Django_Form](/DevStudy/Django/Django_Form.md)
+2025.03.31. docs [Django_Form](/DevStudy/Django/Django_Form.md)
 
-2025.04.01 docs [Django_Static_files](/DevStudy/Django/Django_Static_files.md)
+2025.04.01. docs [Django_Static_files](/DevStudy/Django/Django_Static_files.md)
 
-2025.04.02 docs [Authentication_Sysytem](/DevStudy/Django/Authentication_System.md)
+2025.04.02. docs [Authentication_Sysytem](/DevStudy/Django/Authentication_System.md)
 
-2025.04.03 docs [Authentication_Sysytem2](/DevStudy/Django/Authentication_System2.md)
+2025.04.03. docs [Authentication_Sysytem2](/DevStudy/Django/Authentication_System2.md)
 
-2025.04.04 docs [project_3](/DevStudy/Django/pjt_03/)
+2025.04.04. docs [project_3](/DevStudy/Django/pjt_03/)
 
-2025.04.07.
+2025.04.07. docs [DB_basic](/DevStudy/DB_study/DB_basic.md) docs [SQL](/DevStudy/DB_study/SQL.md) online [250407](/DevStudy/DB_study/onsill/day_1_20250407)
 
 ---
