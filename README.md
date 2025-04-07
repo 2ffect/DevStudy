@@ -5,6 +5,7 @@
 ## 📅 2025/01
 <details>
 <summary> 📂 클릭하여 펼치기 </summary>
+
 2025.01.16. - docs [Git](/TIL/Git/Git.md) , [Git branch](/TIL/Git/GitBranch.md)
 
 2025.01.17. - docs [Git reset](/TIL/Git/GitReset.md) , [Git revert](/TIL/Git/GitRevert.md)
@@ -26,6 +27,7 @@ docs [Enumerate](/TIL/Python/Enumerate.md)
 ## 📅 2025/02
 <details> 
 <summary> 📂 클릭하여 펼치기 </summary>
+
 2025.02.03. - docs [OOP1](/TIL/Python/OOP1.md)
 
 2025.02.04. - docs [OOP2](/TIL/Python/OOP2.md) docs [Exception](/TIL/Python/Exception.md)
@@ -77,6 +79,7 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 ## 📅 2025/03
 <details> 
 <summary> 📂 클릭하여 펼치기 </summary>
+
 2025.03.01. solve [250301](Algorithm_Problem_Solving/250301)
 
 2025.03.02. solve [250302](Algorithm_Problem_Solving/250302)
@@ -133,6 +136,7 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 ## 📅 2025/04
 <details> 
 <summary> 📂 클릭하여 펼치기 </summary>
+
 2025.04.01. docs [Django_Static_files](Django/Django_Static_files.md)
 
 2025.04.02. docs [Authentication_Sysytem](Django/Authentication_System.md)
