@@ -146,6 +146,9 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 2025.04.04. docs [project_3](Django/pjt_03/)
 
 2025.04.07. docs [DB_basic](DB_study/DB_basic.md) docs [SQL](DB_study/SQL.md) online [250407](DB_study/onsill/day_1_20250407)
+
+2025.04.08. docs [SQL2](DB_study/SQL2.md)
+
 </details>
 
 ---
