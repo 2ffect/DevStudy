@@ -146,6 +146,12 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 2025.04.04. docs [project_3](Django/pjt_03/)
 
 2025.04.07. docs [DB_basic](DB_study/DB_basic.md) docs [SQL](DB_study/SQL.md) online [250407](DB_study/onsill/day_1_20250407)
-</details>
 
+2025.04.08. docs [SQL2](DB_study/SQL2.md) online [250408](DB_study/onsill/day_2_20250408)
+
+2025.04.09. docs [Relationships01](DB_study/Relationships01.md) online [250409](DB_study/onsill/day_3_20250409)
+
+2025.04.10. docs [Relationships02](DB_study/Relationships02.md) online [250410](DB_study/onsill/day_4_20250410)
+ 
+</details>
 ---
