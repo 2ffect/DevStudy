@@ -163,7 +163,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.17. docs [DRF2](Django/DRF2.md)
 
-
 </details>
 
 ---
