@@ -163,6 +163,8 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.17. docs [DRF2](Django/DRF2.md)
 
+2025.04.21. docs [CS_DB](CS/DB.md) docs [JS_History](Javascript/JS_History.md) docs [Variable](Javascript/Variable.md) docs [DOM](Javascript)
+
 </details>
 
 ---
