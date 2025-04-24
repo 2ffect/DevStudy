@@ -165,7 +165,11 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.21. docs [CS_DB](CS/DB.md) docs [JS_History](Javascript/JS_History.md) docs [Variable](Javascript/Variable.md) docs [DOM](Javascript/DOM.md)
 
-2025.04.22. docs [JS_Basic_syntax](Javascript/JS_Basic_syntax1.md)
+2025.04.22. docs [JS_Basic_syntax1](Javascript/JS_Basic_syntax1.md)
+
+2025.04.23. docs [JS_Basic_syntax2](Javascript/JS_Basic_syntax2.md)
+
+2025.04.24. docs [Controlling_Event](Javascript/Controlling_Event.md)
 
 </details>
 
