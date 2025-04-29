@@ -168,7 +168,8 @@ mim install "mmcv>=2.0.0" <- mim install mmcv==2.0.0 (mmdet과의 호환성 이�
 
 - MMDetection 설치
 ```shell
-git clone https://github.com/open-mmlab/mmdetections.git
+# git clone https://github.com/open-mmlab/mmdetections.git
+git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetcetion
 pip install -v -e .
 ```
@@ -176,6 +177,8 @@ pip install -v -e .
     - pip install wheel 후 재설치
     - torch 를 1.13.0 버전 이하로 설치 후 재설치
 
+
+### 여기부터 하기
 - MMDetection 설치 확인 코드
 ```shell
 mim download mmdet --config rtmdet_tiny_8xb32-300e_coco --dest .
