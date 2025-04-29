@@ -173,6 +173,8 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.28. docs [Asynchronous_JS](Javascript/Asynchronous_JS.md)
 
+2025.04.29. docs [Ajax_with_Django](Javascript/Ajax_with_Django.md) docs [ObjectDetection](CS/pyTorch_ObjectDetection.md)
+
 </details>
 
 ---
