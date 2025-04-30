@@ -170,7 +170,7 @@ mim install "mmcv>=2.0.0" <- mim install mmcv==2.0.0 (mmdet과의 호환성 이�
 ```shell
 # git clone https://github.com/open-mmlab/mmdetections.git
 git clone https://github.com/open-mmlab/mmdetection.git
-cd mmdetcetion
+cd mmdetection/
 pip install -v -e .
 ```
   - 설치 중 torch 에러가 발생할 경우
