@@ -137,13 +137,13 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 <details> 
 <summary> 📂 클릭하여 펼치기 </summary>
 
-2025.04.01. docs [Django_Static_files](Django/Django_Static_files.md)
+2025.04.01. docs [Django_Static_files](BE/Django/Django_Static_files.md)
 
-2025.04.02. docs [Authentication_Sysytem](Django/Authentication_System.md)
+2025.04.02. docs [Authentication_Sysytem](BE/Django/Authentication_System.md)
 
-2025.04.03. docs [Authentication_Sysytem2](Django/Authentication_System2.md)
+2025.04.03. docs [Authentication_Sysytem2](BE/Django/Authentication_System2.md)
 
-2025.04.04. docs [project_3](Django/pjt_03/)
+2025.04.04. docs [project_3](BE/Django/pjt_03/)
 
 2025.04.07. docs [DB_basic](DB_study/DB_basic.md) docs [SQL](DB_study/SQL.md) online [250407](DB_study/onsill/day_1_20250407)
 
@@ -159,24 +159,27 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.15. docs [MTM](DB_study/MTM.md) docs [Fixtures](DB_study/Fixtures.md)
  
-2025.04.16. docs [DRF](Django/DRF.md) docs [REST_API](Django/REST_API.md)
+2025.04.16. docs [DRF](BE/Django/DRF.md) docs [REST_API](BE/Django/REST_API.md)
 
-2025.04.17. docs [DRF2](Django/DRF2.md)
+2025.04.17. docs [DRF2](BE/Django/DRF2.md)
 
-2025.04.21. docs [CS_DB](CS/DB.md) docs [JS_History](Javascript/JS_History.md) docs [Variable](Javascript/Variable.md) docs [DOM](Javascript/DOM.md)
+2025.04.21. docs [CS_DB](CS/DB.md) docs [JS_History](FE/Javascript/JS_History.md) docs [Variable](FE/Javascript/Variable.md) docs [DOM](FE/Javascript/DOM.md)
 
-2025.04.22. docs [JS_Basic_syntax1](Javascript/JS_Basic_syntax1.md)
+2025.04.22. docs [JS_Basic_syntax1](FE/Javascript/JS_Basic_syntax1.md)
 
-2025.04.23. docs [JS_Basic_syntax2](Javascript/JS_Basic_syntax2.md)
+2025.04.23. docs [JS_Basic_syntax2](FE/Javascript/JS_Basic_syntax2.md)
 
-2025.04.24. docs [Controlling_Event](Javascript/Controlling_Event.md)
+2025.04.24. docs [Controlling_Event](FE/Javascript/Controlling_Event.md)
 
-2025.04.28. docs [Asynchronous_JS](Javascript/Asynchronous_JS.md)
+2025.04.28. docs [Asynchronous_JS](FE/Javascript/Asynchronous_JS.md)
 
-2025.04.29. docs [Ajax_with_Django](Javascript/Ajax_with_Django.md) docs [ObjectDetection](CS/pyTorch_ObjectDetection.md)
+2025.04.29. docs [Ajax_with_Django](FE/Javascript/Ajax_with_Django.md) docs [ObjectDetection](CS/pyTorch_ObjectDetection.md)
 
-2025.05.02 docs [07-pjt](pjt/07-pjt/README_JH.md)
+2025.05.02. docs [07-pjt](pjt/07-pjt/README_JH.md)
 
+2025.05.07. docs [Introduction_of_Vue](FE/Vue/Introduction_of_Vue.md)
+
+2025.05.08. docs [Basic_Syntax1](FE/Vue/Basic_Syntax1.md)
 
 </details>
 
