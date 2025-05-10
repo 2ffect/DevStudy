@@ -179,9 +179,11 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.05.07. docs [Introduction_of_Vue](FE/Vue/Introduction_of_Vue.md)
 
-2025.05.08. docs [Basic_Syntax1](FE/Vue/Basic_Syntax1.md)
+2025.05.08. docs [Vue_Basic_Syntax1](FE/Vue/Basic_Syntax1.md)
 
-2025.05.09. docs [Basic_Syntax2](FE/Vue/Basic_Syntax2.md)
+2025.05.09. docs [Vue_Basic_Syntax2](FE/Vue/Basic_Syntax2.md)
+
+2025.05.10 docs [Network_Basic_Syntax](CS/Network/Basic_Syntax.md)
 
 </details>
 
