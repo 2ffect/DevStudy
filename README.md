@@ -175,6 +175,13 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.04.29. docs [Ajax_with_Django](FE/Javascript/Ajax_with_Django.md) docs [ObjectDetection](CS/pyTorch_ObjectDetection.md)
 
+</details>
+
+
+## 📅 2025/05
+<details> 
+<summary> 📂 클릭하여 펼치기 </summary>
+
 2025.05.02. docs [07-pjt](pjt/07-pjt/README_JH.md)
 
 2025.05.07. docs [Introduction_of_Vue](FE/Vue/Introduction_of_Vue.md)
