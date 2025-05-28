@@ -1,0 +1,149 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="container my-5">
+  <!-- 헤더 -->
+  <div class="text-center mb-5">
+    <p class="subtitle fs-5 text-muted">주식에 대한, 투자자들의 목소리</p>
+    <h1 class="title fw-bold">📈 주식 댓글 분석기</h1>
+  </div>
+
+  <!-- 검색창 -->
+  <form
+    method="GET"
+    action="{% url 'pjt04:stock_finder' %}"
+    class="input-group mb-4"
+  >
+    {% csrf_token %}
+    <input
+      type="text"
+      name="company_name"
+      id="company"
+      class="form-control"
+      placeholder="회사 이름을 입력하세요"
+      value="{{ company_name|default:'' }}"
+      {%
+      if
+      is_loading
+      %}readonly{%
+      endif
+      %}
+      required
+    />
+    {% if form_data %}
+    <input
+      type="hidden"
+      name="loading_step"
+      value="{{ form_data.loading_step }}"
+    />
+    {% endif %}
+    <button
+      type="submit"
+      class="btn btn-primary"
+      {%
+      if
+      is_loading
+      %}disabled{%
+      endif
+      %}
+    >
+      검색
+    </button>
+  </form>
+
+  <!-- 로딩 화면 -->
+  {% if is_loading %}
+  <div
+    class="d-flex align-items-center gap-3 bg-body-secondary p-3 rounded shadow-sm"
+  >
+    <img
+      class="loading-gif"
+      src="{% static 'admin/img/loading.gif' %}"
+      alt="Loading..."
+      style="width: 30px"
+    />
+    <div>
+      <h5 class="mb-1">"{{ company_name }}" 데이터 수집 및 분석 중...</h5>
+      <small class="text-muted"
+        >토스 증권에서 댓글을 수집하고 'gpt-4o-mini' 모델을 이용해 분석
+        중입니다.</small
+      >
+    </div>
+  </div>
+
+  <!-- 자동 진행 폼 -->
+  <form method="POST" action="{% url 'pjt04:stock_finder' %}" id="progressForm">
+    {% csrf_token %}
+    <input type="hidden" name="company_name" value="{{ company_name }}" />
+    <input type="hidden" name="loading_step" value="selenium" />
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById("progressForm").submit();
+      }, 1000);
+    });
+  </script>
+
+  {% else %}
+  <!-- 에러 메시지 -->
+  {% if error_message %}
+  <div class="alert alert-danger">{{ error_message }}</div>
+  {% endif %}
+
+  <!-- 결과 출력 -->
+  {% if company_name %}
+    <h2 class="mt-4">
+      {{ company_name }} {% if stock_code %}<span class="text-muted"
+        >({{ stock_code }})</span
+      >{% endif %}
+    </h2>
+
+
+  <!-- 댓글 섹션 -->
+  {% if comments %}
+  <div class="mt-4">
+    <h5 class="mb-3">🗣 수집된 댓글 ({{ comments|length }}개)</h5>
+    <ul class="list-group">
+      {% for comment in comments %}
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <span>{{ comment }}</span>
+        <form
+          method="POST"
+          action="{% url 'pjt04:delete_comment' %}"
+          class="ms-3"
+        >
+          {% csrf_token %}
+          <input type="hidden" name="stock_code" value="{{ stock_code }}" />
+          <input
+            type="hidden"
+            name="comment_index"
+            value="{{ forloop.counter0 }}"
+          />
+          <button type="submit" class="btn btn-sm btn-outline-danger">
+            삭제
+          </button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="d-flex">
+    <div class="btn ms-auto m-1" style='background-color: #3F72AF;'>
+      <a href="https://tossinvest.com/stocks/{{stock_code}}/community" style="color: #fff;"
+        >종토방 바로가기</a
+      >
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- GPT 분석 결과 -->
+  {% if chatgpt_response %}
+  <div class="mt-5 p-4 bg-light-subtle rounded shadow-sm">
+    <h5 class="mb-3">🤖 GPT-4o-mini 분석 결과</h5>
+    <p>{{ chatgpt_response }}</p>
+  </div>
+  {% endif %} {% endif %} {% endif %}
+</div>
+{% endblock content %}

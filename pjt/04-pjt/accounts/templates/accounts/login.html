@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="mb-4 fw-bold text-primary-emphasis" style="color: #7B2FF7;">Login</h2>
+
+  <form action="{% url 'accounts:login' %}" method="post" class="d-grid gap-3">
+    {% csrf_token %}
+
+    <!-- 이메일 입력 -->
+    <input 
+      type="text" 
+      name="username" 
+      class="form-control bg-white border-0 p-3" 
+      placeholder="아이디를 입력해주세요."
+      required
+    >
+
+    <!-- 비밀번호 입력 -->
+    <input 
+      type="password" 
+      name="password" 
+      class="form-control bg-white border-0 p-3" 
+      placeholder="비밀번호를 입력해주세요."
+      required
+    >
+
+
+    <!-- 로그인 버튼 -->
+    <button type="submit" class="btn btn-primary fw-bold py-2" style="background-color: #3F72AF; border-color: #3F72AF;">
+      Login
+    </button>
+  </form>
+</div>
+{% endblock content %}

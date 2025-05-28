@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+  <h1 class="mb-4">{{ user }} 님의 관심 종목</h1>
+
+  <!-- 종목 추가 폼 -->
+  <form action="{% url 'accounts:add_stock' %}" method="post" class="row g-2 align-items-center mb-4">
+    {% csrf_token %}
+    <div class="col-sm-8">
+      <input type="text" name="stock_name" class="form-control" placeholder="관심 종목 입력" required>
+    </div>
+    <div class="col-sm-4">
+      <button type="submit" class="btn w-100" style="background-color: #3F72AF; color: #F9F7F7;">추가하기</button>
+    </div>
+  </form>
+
+  <!-- 관심 종목 카드 목록 -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for stock in stocks %}
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <a href="{% url 'pjt04:stock_finder' %}?company_name={{ stock.stock_name }}" class="card-title h5 text-decoration-none text-primary-emphasis mb-0">
+            {{ stock.stock_name }}
+          </a>
+          <form action="{% url 'accounts:delete_stock' %}" method="post" class="ms-3">
+            {% csrf_token %}
+            <input type="hidden" name="stock_name" value="{{ stock.stock_name }}">
+            <button type="submit" class="btn btn-sm btn-outline-danger">삭제</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+      <p class="text-muted">관심 종목이 없습니다.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
+

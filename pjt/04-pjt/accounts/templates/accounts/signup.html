@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="mb-4 fw-bold" style="color:#112D4E;">회원가입</h2>
+
+  <form action="{% url 'accounts:signup' %}" method="post" class="d-grid gap-3">
+    {% csrf_token %}
+
+    <!-- 개별 필드 렌더링 -->
+    {% for field in form %}
+      <div>
+        {{ field.errors }}
+        {{ field.label_tag }}
+        {{ field }}
+      </div>
+    {% endfor %}
+
+    <!-- 스타일 덧입히기 -->
+    <style>
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        background-color:rgb(255, 255, 255);
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        width: 100%;
+        font-family: 'NanumSquareNeo', sans-serif;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 0.95rem;
+      }
+    </style>
+
+    <!-- 회원가입 버튼 -->
+    <button type="submit" class="btn fw-bold py-2" style="background-color: #3F72AF; border: none; color: white; border-radius: 12px;">
+      회원가입
+    </button>
+  </form>
+</div>
+{% endblock content %}

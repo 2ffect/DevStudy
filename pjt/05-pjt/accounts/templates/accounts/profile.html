@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h1>{{person.username}}님의 프로필 페이지</h1>
+        <p>팔로잉: {{person.followings.all|length}} / 팔로워: {{person.followers.all|length}}</p>
+        {% if request.user != person%}
+            <form action="{% url "accounts:follow" person.pk %}" method="POST">
+                {% csrf_token %}
+                {% if request.user in person.followers.all %}
+                    {% comment %} 이미 팔로워 목록에 있으면 {% endcomment %}
+                    <input type="submit" value="unfollow">
+                {% else %}
+                    <input type="submit" value="follow">
+                {% endif %}
+                
+            </form>
+        {% endif %}
+    </div>
+    <hr>
+    <div>
+        <p>회원번호: {{person.pk}}</p>
+        <p>유저이름: {{person.username}}</p>
+        {% comment %} nickname필드는 언제 쓰는거...? {% endcomment %}
+        <p>가입날짜: {{person.date_joined}}</p>
+        <h2>유저가 쓴 글</h2>
+        <ul>
+            {% for article in articles %}
+                <li>
+                    <p>글번호:{{article.pk}}</p>
+                </li>
+                <li>
+                    <p>
+                        글제목: <a href="{% url "boards:detail" article.pk%}">{{article.title}}</a>
+                    </p>
+                </li>
+
+            {% empty %}
+                <li>아직 작성한 글이 없습니다....</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>유저가 쓴 댓글</h2>
+        <ul>
+            {% for comment in comments %}
+                <li>
+                    <a href="{% url "boards:detail" comment.board.pk%}">{{comment.board.title}}</a>
+                </li>
+                <li>{{comment.content}}</li>
+            {% empty %}
+                <li>아직 작성한 댓글이 없습니다....</li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+    <div>
+        <h2>팔로워</h2>
+        <ul>
+            {% for follower in person.followers.all %}
+                <li>{{follower}}</li>
+            {% empty %}
+                <li>아직 팔로워가 없습니다....</li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+    
+
+
+{% endblock content %}
+
+
+

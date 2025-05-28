@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockVoice - 주식 댓글 분석기</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f8fc;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .form-container label {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form-container input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #004080;
+        }
+
+        .comment-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .comment-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-item strong {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .delete-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>StockVoice</h1>
+        <h2>주식에 대한, 투자자들의 목소리</h2>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form method="post" action="{% url 'finance:search' %}">
+                {% csrf_token %}
+                <label for="keyword">회사 이름을 입력하세요:</label>
+                <input type="text" id="keyword" name="keyword" required>
+                <button type="submit">검색</button>
+            </form>
+        </div>
+
+        {% if comments %}
+            <div class="comment-container">
+                <h3>수집된 댓글:</h3>
+                <ul class="comment-list">
+                    {% for comment in comments %}
+                        <li class="comment-item">
+                            <strong>{{ comment.company_name }} ({{ comment.stock_code }})</strong><br>
+                            {{ comment.comment|linebreaksbr }}<br>
+
+                            <form method="post" action="{% url 'finance:delete_comment' comment.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="delete-button">삭제</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p style="margin-top:30px; text-align:center;">댓글이 없습니다.</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 StockVoice - 모든 권리 보유</p>
+    </footer>
+
+</body>
+</html>
