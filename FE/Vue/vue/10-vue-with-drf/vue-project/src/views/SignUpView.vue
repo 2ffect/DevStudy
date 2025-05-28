@@ -1,5 +1,3 @@
-<!-- views/SignUpView.vue -->
-
 <template>
   <div>
     <form @submit.prevent="signup">

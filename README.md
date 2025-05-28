@@ -196,9 +196,13 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.05.12 docs [Vue_Single-File_Components](FE/Vue/Single-File_Components.md)
 
-2025.05.13 docs [Vue_Component_State_Flow](FE/Vue/Component_State_Flow.md) [250513_parcitce](FE/Vue/parcitce/250513/)
+2025.05.13 docs [Vue_Component_State_Flow](FE/Vue/Component_State_Flow.md) [250513_pracitce](FE/Vue/pracitce/250513/)
 
-2025.05.14 docs [Vue_Router](FE/Vue/Router.md)
+2025.05.14 docs [Vue_Router](FE/Vue/Router.md) [250514_practice](FE/Vue/practice/250514/)
+
+2025.05.15 docs [Vue_State_Management](FE/Vue/State_Management.md) [250515_practice](FE/Vue/practice/250515/)
+
+2025.05.16 docs [pjt_08'회고'](pjt/08-pjt/README_JH.md)
 
 2025.05.15 docs [Vue_With_DRF](FE/Vue/Vue_With_DRF.md)
 
