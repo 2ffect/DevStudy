@@ -204,8 +204,6 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 2025.05.16 docs [pjt_08'회고'](pjt/08-pjt/README_JH.md)
 
-2025.05.15 docs [Vue_With_DRF](FE/Vue/Vue_With_DRF.md)
-
 </details>
 
 ---
