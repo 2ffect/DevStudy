@@ -206,4 +206,12 @@ solve [250210](Algorithm_Problem_Solving/250210/)
 
 </details>
 
+## 📅 2025/07
+<details> 
+<summary> 📂 클릭하여 펼치기 </summary>
+
+2025.07.02. study [정보처리기사실기 정리](CS/정보처리기사실기.md)
+
+</details>
+
 ---
